@@ -1,0 +1,32 @@
+.item {
+    background-color: palevioletred;
+    padding: 18px;
+    border: 1px red ;
+}
+
+.contenedor{
+    display: grid;
+    grid-template: 100px 1fr 1o 50px;
+    grid-template-columns: 300px 1f;
+
+    grid-gap: 5px;
+    height: 100vh;
+
+    grid-template-areas:"cabecera cabecera"
+                        "izquierdo contenido"
+                        "pie pie" ;
+}
+
+.cabecera {
+    grid-area: cabecera;
+}
+.izquierdo
+{
+ grid-area: izquierdo;
+}
+.contenido{
+    grid-area: contenido;
+}
+.pie{
+    grid-area: pie;
+}
