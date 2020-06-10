@@ -1,0 +1,104 @@
+.general
+{
+    background-color: pink;
+    padding: 18px;
+    border: 1px red ;
+}
+.contenedor
+{
+    display: grid;
+    grid-template: 50px 50px 50px 1fr 100px;
+    grid-template-columns: 250px 1fr;
+
+    grid-gap: 5px;
+    
+
+    grid-template-areas:"titulo titulo"
+                        "menu menu"
+                        "video video"
+                        "ordenar contenido"
+                        "pie pie";
+    
+}
+
+.titulo{
+    grid-area: titulo;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    
+}
+#menu{
+    grid-area: menu;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    
+
+    
+    margin:auto;
+    width: 100%;
+
+    background-color:#FE2E2E ;
+    color: #fff;
+    
+}
+
+ul, ol{
+    list-style: none; /*Quitamos los estilos de lista */
+}
+
+.lista{
+    display: flex;
+}
+
+.lista > li{
+    
+    text-align: left; /*Ubicamos el texto del submenú a la izquierda */
+    width: 100%;
+}
+
+.lista li a{  /*Establecemos el formato para el submenú con sus respectivos enlaces */
+    background-color:#FE2E2E;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 20px;
+    display:block;
+}
+.lista li a:hover{ /*Color del submenú al pasar el mouse */
+    background-color:#434343 ;
+}
+.lista li ul{ /*Ocultamos el submenú */
+    display:none;
+    position:absolute;
+    min-width:140px;
+    z-index:2;
+}
+.lista li:hover > ul{ /*Aparecemos el submenú al pasar el mouse por la sección del menú a la que pertenece*/
+    display: block;
+}
+.lista li ul li{
+    position: relative;
+}
+.lista li ul li ul{
+    right:-140px;
+    top:0px;
+}
+.video
+{
+    grid-area: video;
+}
+
+.ordenar{
+    grid-area: ordenar;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+.contenido{
+    grid-area: contenido;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+.pie{
+    grid-area: pie;
+}
+
