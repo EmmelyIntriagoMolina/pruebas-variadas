@@ -4,18 +4,18 @@
 }
 .general
 {
-    background-color: pink;
+    background-color: white;
     padding: 30px;
-    border: 1px red ;
+    
 }
 .contenedor
 {
     display: grid;
     grid-template: 50px 50px 50px 1fr 100px;
-    grid-template-columns: 200px 1fr;
-
-    grid-gap: 5px;
+    grid-template-columns: 300px 1fr;
     
+    
+    text-decoration: none;
 
     grid-template-areas:"cabecera cabecera"
                         "menu menu"
@@ -28,21 +28,25 @@
 .cabecera{
     grid-area: cabecera;
     font-family: serif;
-    font-size: 25px;
-    font-weight: bold; /*Ubicamos en negrita el titulo */
+    text-decoration: none;
 
+    width:100%;
     text-align: center;/*Centramos el titulo */
-    padding:20px;
+    padding:auto;
     
     
 }
 
+.compra{
+    text-decoration: none;
+}
 #menu{
     grid-area: menu;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    text-align: center;
-    
+    text-align:center;
+
+   
     padding:0px 30px;/*Anchura del menú */
     margin:0px;
  }
@@ -61,18 +65,17 @@ ul, ol{
     width: 100%;
 }
 
-
-
 .lista li a{  /*Establecemos el formato para el submenú con sus respectivos enlaces */
-    background-color:#FE2E2E;
+    background-color:rgb(11, 11, 49);
     color:#fff;
     border: red;
     text-decoration:none; /*Permite quitar decoraciones al texto del submenú */
     padding:12px 50px;
     display:block;
 }
+
 .lista li a:hover{ /*Color del submenú al pasar el mouse */
-    background-color:#434343 ;
+    background-color: rgb(40, 40, 136) ;
     
 }
 .lista li ul{ /*Ocultamos el submenú */
@@ -80,6 +83,7 @@ ul, ol{
     position:absolute;
     z-index:2;/*Permite superponer el submenu del menu, el numero 2 representa la segunda capa del menu */
 }
+
 .lista li:hover > ul{ /*Aparecemos el submenú al pasar el mouse por la sección del menú a la que pertenece*/
     display: block;
 }
@@ -94,11 +98,27 @@ ul, ol{
 
 .ordenar{
     grid-area: ordenar;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-family: serif;
+    font-size: 20px;
 
-    
 }
+
+table {
+    padding:30px;
+    width: 100%;
+    border-spacing: 6px;
+    border: 1px solid white;
+}
+
+td{
+    border: white 4px solid;
+}
+
+#texto1{
+    font-size: 20px;
+
+}
+
 
 .contenido{
     grid-area: contenido;
@@ -108,4 +128,6 @@ ul, ol{
 .pie{
     grid-area: pie;
 }
+
+
 

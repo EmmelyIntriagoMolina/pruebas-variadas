@@ -8,13 +8,18 @@
 </head>
 <body>
     <section class="contenedor">
+        <!--CABECERA-->
         <header class="general cabecera">
             <form action="" method="">		    
-                <input type="search" placeholder="Search...">		    	
-                <button>Search</button>
+                <input type="search" placeholder="Buscar...">	
+                <button>Buscar</button>
             </form>
+            <section class="general compra">
+                <a href="compra.html">Carrito</a>	
+            </section>
+             
         </header>
-
+        <!--MENÚ-->
         <nav class="general " id="menu"><!--MENU-->
             <ul class="lista">
                 <li><a href="">Insumos
@@ -32,18 +37,23 @@
                     
                 </li>
              <!--Las siguientes secciones del menú permiten acceder de forma rápida a otras secciones de nuestra página-->
-                <li><a href="">Combos</a> </li> <!--Se mostrarán productos combinados entre sí, para fayor facilidad de selección-->
+                <li><a href="combos.html">Combos</a> </li> <!--Se mostrarán productos combinados entre sí, para fayor facilidad de selección-->
                 <li><a href="">Ofertas</a> </li> <!--Esta sección será la más dinámica, ya que se realizarán cambios constantemente para ofrecer mejores precios a los clientes-->
-                <li><a href="">Registro</a> </li> <!-- mostrará datos de contacto o para presentar alguna queja en caso de ser requerido-->
-                <li><a href="">Contáctanos</a> </li> <!-- muestra el perfil laboral/estudiantil del desarrollador y la finalidad de realizar esta página web-->
+                <li><a href="">Servicio al Cliente</a> </li> <!-- mostrará datos de contacto o para presentar alguna queja en caso de ser requerido-->
+                <li><a href="">Registro</a> </li> <!-- muestra el perfil laboral/estudiantil del desarrollador y la finalidad de realizar esta página web-->
             </ul>
         </nav>
+
+        <!--VIDEO-->
         <section class="general video"> 
-            <video src="../videos/emergencia.mp4" autoplay loop control width="500" height="100" ></video>
+            <video src="../videos/emergenciaCovid.mp4" autoplay loop controls width="100%" ></video>
         </section>
 
-        <section class="general ordenar">Ordenar por:
+        <!--ORDENAR POR-->
+        <section class="general ordenar">
+            <label id="texto1"> ORDENAR POR:</label>
             <table>
+                
                 <tr>
                     <td>
                         Precio
@@ -51,17 +61,14 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="checkbox1" value="checkbox">Mayor a Menor
+                        <label><input type="radio" id="radio1" value="mayor" name="precio"> Mayor a Menor</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada-->
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="checkbox1" value="checkbox">Menor a Mayor
+                        <label><input type="radio" id="radio2" value="menor" name="precio"> Menor a Mayor</label>
                     </td>
                 </tr>
-                
-            </table>
-            <table>
                 <tr>
                     <td>
                         Nombre
@@ -69,25 +76,32 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="checkbox1" value="checkbox">A a la Z
+                        <label><input type="radio" id="radio3" value="az" name="nombre"> De la A a la Z</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada-->
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="checkbox1" value="checkbox">Z a la A
+                        <label><input type="radio" id="radio4" value="za" name="nombre"> De la Z a la A</label>
                     </td>
                 </tr>
+                
             </table>
             
-                
-            
-                    
-                
         </section>
 
+        <!--CONENIDO-->
         <section class="general contenido"> Contenido</section>
 
-        <footer class="general pie">Pie</footer>
+        <!--PIE DE PAGINA-->
+        <footer class="general pie">
+            
+            <ul>
+                <li><a href="">Acerca de</a></li>
+                <li><a href="">Redes Sociales</a></li>
+                <li><a href="">Sobre la Página</a></li>
+            </ul>
+            <label>Emmely Intriago, Manta-Ecuador © Copyright 2020</label>
+        </footer>
     </section>
 </body>
 </html>
