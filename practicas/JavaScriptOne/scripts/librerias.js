@@ -2,18 +2,18 @@
 window.addEventListener('load', function()
 {
     //Añadir el evento para calcular la suma al boton
-    btcalcular.addEvenListener('click', function()
+    btcalcular.addEventListener('click', function()
     {
-    txtresultado.value= Number(txtnumero.value)+parseIint(txtnumero2.value)
+    txtresultado.value= Number(txtnumero.value)+parseInt(txtnumero2.value)
     });
 
 
     //colocar la cadena invertida haciendo clic en el botón
-    btinvertir.addEvenListener('click', function()
+    btinvertir.addEventListener('click', function()
     {
-        divresultado.innerHTML= txtcadena.value.split("").reverse().join("")
+        divresultados.innerHTML= txtcadena.value.split("").reverse().join("")
     });
 
-
+    
 });
 
