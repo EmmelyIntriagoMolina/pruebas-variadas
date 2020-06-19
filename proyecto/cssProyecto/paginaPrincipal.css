@@ -175,7 +175,7 @@ ul, ol{
     
 }
 
-.seccion1 table{
+.sub table{
     grid-area: seccion1;
     padding:20px;
     width: 100%;
@@ -184,7 +184,8 @@ ul, ol{
     border: 1px solid #eff2f6;
 
     text-align: left;
-    font-size: 20px;   
+    font-size: 20px;  
+    
 }
 
 #seccion1{
@@ -211,6 +212,7 @@ progress::-webkit-progress-bar {
 
 .seccion1 td{
     width: 50%;
+    font-family: serif;
 }
 
 
