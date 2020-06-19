@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venta de Insumos</title>
     <link rel="stylesheet" href="./cssProyecto/paginaPrincipal.css">
+    <script src="./javaScriptProyecto/paginaPrincipal.js"></script>
 </head>
 <body>
     <section class="contenedor">
@@ -51,56 +52,764 @@
 
         <!--ORDENAR POR-->
         <section class="general ordenar">
-            <label id="texto1"> ORDENAR POR:</label>
             <table>
-                
                 <tr>
-                    <td>
-                        Precio
-                    </td>
+                    <td><label id="texto1"> Ordenar por:</label></td>
                 </tr>
                 <tr>
-                    <td>
-                        <label><input type="radio" id="radio1" value="mayor" name="precio"> Mayor a Menor</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada-->
-                    </td>
+                    <td><label>Precio</label></td>
                 </tr>
                 <tr>
-                    <td>
-                        <label><input type="radio" id="radio2" value="menor" name="precio"> Menor a Mayor</label>
-                    </td>
+                    <td><label><input type="radio" id="radio1" value="mayor" name="precio"> Mayor a Menor</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada--></td>
                 </tr>
                 <tr>
-                    <td>
-                        Nombre
-                    </td>
+                    <td><label><input type="radio" id="radio2" value="menor" name="precio"> Menor a Mayor</label></td>
                 </tr>
                 <tr>
-                    <td>
-                        <label><input type="radio" id="radio3" value="az" name="nombre"> De la A a la Z</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada-->
-                    </td>
+                    <td><label>Nombre</label></td>
                 </tr>
                 <tr>
-                    <td>
-                        <label><input type="radio" id="radio4" value="za" name="nombre"> De la Z a la A</label>
-                    </td>
+                    <td><label><input type="radio" id="radio3" value="az" name="nombre"> De la A a la Z</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada--></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio4" value="za" name="nombre"> De la Z a la A</label></td>
                 </tr>
                 
             </table>
-            
         </section>
 
         <!--CONENIDO-->
-        <section class="general contenido"> Contenido</section>
+        <section class="general contenido">
+            <section class="sub seccion1">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+                
+            </section>
+
+            
+                <section class="sub seccion2">
+                    <table class="comprar">
+                        <tr>
+                            <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label>Alcohol Pequeño</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                            </td>
+                            <td>
+                                <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <span>Exis. </span>
+                                <progress id="seccion1" max="100" value="82"></progress>
+                                
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td colspan="2">
+                                <label>$2,50 c/u</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                            </td>
+                        </tr>
+                       
+                    </table>
+    
+            </section>
+
+            
+                <section class="sub seccion3">
+                    <table class="comprar">
+                        <tr>
+                            <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label>Alcohol Pequeño</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                            </td>
+                            <td>
+                                <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <span>Exis. </span>
+                                <progress id="seccion1" max="100" value="82"></progress>
+                                
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td colspan="2">
+                                <label>$2,50 c/u</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                            </td>
+                        </tr>
+                       
+                    </table>
+    
+            </section>
+            <section class="sub seccion4">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion5">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion6">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion7">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion8">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion9">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion10">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion11">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion12">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion13">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion14">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion15">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion16">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion17">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+            <section class="sub seccion18">
+                <table class="comprar">
+                    <tr>
+                        <td colspan="2"><img src="../imagenes/alcohol.png" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Alcohol Pequeño</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="82"></progress>
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$2,50 c/u</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href=""><button name="compra" value="comprar" id="bt1">  COMPRAR</button></a>
+                        </td>
+                    </tr>
+                   
+                </table>
+    
+            </section>
+    
+        </section>
 
         <!--PIE DE PAGINA-->
         <footer class="general pie">
             
-            <ul>
-                <li><a href="">Acerca de</a></li>
-                <li><a href="">Redes Sociales</a></li>
-                <li><a href="">Sobre la Página</a></li>
-            </ul>
-            <label>Emmely Intriago, Manta-Ecuador © Copyright 2020</label>
+            <table>
+                <tr>
+                    <td><a href=""><label>Acerca de</label></a></td>
+                </tr>
+                <tr>
+                    <td><a href=""><label>Redes Sociales</label></a></td>
+                </tr>
+                <tr>
+                    <td><a href=""><label>Acerca de</label></a></td>
+                </tr>
+                <tr>
+                    <td><label><a href="">Sobre la Página</a></label></td>
+                </tr>
+                <tr>
+                    <td><label>Emmely Intriago, Manta-Ecuador © Copyright 2020</label></td>
+                </tr>
+            </table>
+            
         </footer>
     </section>
 </body>

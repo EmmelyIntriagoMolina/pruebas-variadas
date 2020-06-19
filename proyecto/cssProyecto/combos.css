@@ -10,7 +10,7 @@
     
 }
 
-.contenedor2
+.contenedor
 {
     display: grid;
     grid-template: 50px 1fr 50px;
@@ -92,4 +92,104 @@ td{
 #texto1{
     font-size: 20px;
 
+}
+.contenido{
+    grid-area: contenido;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+.contenido{
+    display: grid;
+    grid-template: 300px, 300px, 300px, 300px, 300px, 300px;
+    grid-template-columns: 100px, 100px, 100px;
+    
+    grid-gap: 5px;
+    
+    
+    text-decoration: none;
+
+    grid-template-areas:"seccion1 seccion2 seccion3"
+                        "seccion4 seccion5 seccion6"
+                        "seccion7 seccion8 seccion9"
+                        "seccion10 seccion11 seccion12"
+                        "seccion13 seccion14 seccion15"
+                        "seccion16 seccion17 seccion18";               
+}
+
+.sub{
+    background-color: #dee5ed;
+    padding: 50px;
+    
+}
+
+.seccion1{
+    grid-area: seccion1;
+}
+
+.seccion2{
+    grid-area: seccion2;
+}
+
+.seccion3{
+    grid-area: seccion3;
+}
+
+.seccion4{
+    grid-area: seccion4;
+}
+
+.seccion5{
+    grid-area: seccion5;
+}
+
+.seccion6{
+    grid-area: seccion6;
+}
+
+.seccion7{
+    grid-area: seccion7;
+}
+
+.seccion8{
+    grid-area: seccion8;
+}
+
+.seccion9{
+    grid-area: seccion9;
+}
+
+.seccion10{
+    grid-area: seccion10;
+}
+
+.seccion11{
+    grid-area: seccion11;
+}
+
+.seccion12{
+    grid-area: seccion12;
+}
+
+.seccion13{
+    grid-area: seccion13;
+}
+
+.seccion14{
+    grid-area: seccion14;
+}
+
+.seccion15{
+    grid-area: seccion15;
+}
+
+.seccion16{
+    grid-area: seccion16;
+}
+
+.seccion17{
+    grid-area: seccion17;
+}
+
+.seccion18{
+    grid-area: seccion18;
 }
