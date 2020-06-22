@@ -188,6 +188,7 @@ ul, ol{
     
 }
 
+
 #seccion1{
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -298,7 +299,7 @@ progress::-webkit-progress-bar {
 }
 
 .pie{
-    border-radius: 35px;
+    border-radius: 10px;
 }
 .pie a{
     text-decoration: none;

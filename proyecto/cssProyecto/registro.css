@@ -1,0 +1,185 @@
+*{
+    margin: 0px;
+    padding:0px;
+    background-color: white;
+}
+
+.general
+{
+ 
+    padding: 10px;
+    
+}
+.contenedor{
+
+    display: grid;
+    grid-template: 50px 50px 50px;
+    grid-template-columns: 1fr;
+    
+    
+    text-decoration: none;
+
+    grid-template-areas:"cabecera cabecera"
+                        "registro barraMenu"
+                        "pie pie";
+}
+
+.cabecera{
+    grid-area: cabecera;
+    font-family: serif;
+    text-decoration: none;
+
+    width:100%
+}
+
+.registro table{
+    grid-area: registro;
+}
+
+.registro table{
+    padding:10px;
+    width: 100%;
+    border-spacing: 6px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color:white;
+    margin: auto;
+    margin-top: 0px;
+    margin-left: 18px;
+    color: black;
+    
+
+}
+
+.formulario{
+    width: 89%;
+    background-color:white;
+    padding: 10px;
+    border-radius:4px ;
+    margin-bottom: 16px;
+    border: 1px solid rgb(40, 40, 136) ;
+    font-size: 18px;
+    color: black;
+}
+
+.correoDir{
+    margin-bottom: 16px;
+    border: 1px solid rgb(40, 40, 136);
+    padding: 10px;
+    border-radius:4px ; 
+    font-size: 18px;
+}
+
+.registro p{
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    background-color: white;
+    
+}
+
+.registro a{
+    color: rgb(11, 11, 49);
+    text-decoration: none;
+    background: white;
+    font-size: 20px;
+
+
+}
+
+.registro a:hover{
+    color: black;
+    text-decoration: underline;
+    
+}
+
+.boton{
+    width: 100%;
+    background: rgb(11, 11, 49);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 22px ;
+    
+
+}
+.registro h4{
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 22px;
+    background: white;
+    color: black;
+}
+
+.registro label{
+    color: black;
+    background: white;
+    font-size: 20px;
+}
+
+.registro td{
+    background: wihte;
+}
+
+
+
+
+.barraMenu{
+    grid-area: barraMenu;
+}
+
+.pie{
+    grid-area: pie;
+}
+#menu{
+    grid-area: menu;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align:center;
+
+   
+    padding:0px 30px;/*Anchura del menú */
+    margin:0px;
+ }
+
+ul, ol{
+    list-style: none; /*Quitamos los estilos de lista */
+}
+
+.lista{
+    display: flex;
+}
+
+.lista > li{
+    
+    text-align: left; /*Ubicamos el texto del submenú a la izquierda */
+    width: 100%;
+}
+
+.lista li a{  /*Establecemos el formato para el submenú con sus respectivos enlaces */
+    background-color:rgb(11, 11, 49);
+    color:#fff;
+    
+    text-decoration:none; /*Permite quitar decoraciones al texto del submenú */
+    padding:12px 50px;
+    display:block;
+}
+
+.lista li a:hover{ /*Color del submenú al pasar el mouse */
+    background-color: rgb(40, 40, 136) ;
+    
+}
+.lista li ul{ /*Ocultamos el submenú */
+    display:none;
+    position:absolute;
+    z-index:2;/*Permite superponer el submenu del menu, el numero 2 representa la segunda capa del menu */
+}
+
+.lista li:hover > ul{ /*Aparecemos el submenú al pasar el mouse por la sección del menú a la que pertenece*/
+    display: block;
+}
+.lista li ul li{
+    position: relative;
+}

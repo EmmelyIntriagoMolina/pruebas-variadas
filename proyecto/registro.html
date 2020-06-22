@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./cssProyecto/registro.css">
+</head>
+<body>
+    <section class="contenedor">
+
+        <header class="general cabecera">
+            <nav class="general " id="menu"><!--MENU-->
+                <ul class="lista">
+                    <li><a href="paginaPrincipal.html">Insumos
+                        <ul> 
+                            <li><a href="">Alcohol</a> </li>
+                            <li><a href="">Alcohol en Gel</a> </li>
+                            <li><a href="">Batas Quirúrgicas</a> </li>
+                            <li><a href="">Botas Quirúrgicas</a></li>
+                            <li><a href="">Guantes Quirúrgicos</a></li>
+                            <li><a href="">Gorros Quirúrgicos</a></li>
+                            <li><a href="">Máscaras de Protección</a> </li>
+                            <li><a href="">Macarillas Quirúrgicas</a> </li> <!--Cada uno de las secciones será mostrado dentro del menú desplegable-->
+                            <li><a href="">Trajes de Bioseguridad</a> </li>
+                        </ul>
+                        
+                    </li>
+                 <!--Las siguientes secciones del menú permiten acceder de forma rápida a otras secciones de nuestra página-->
+                    <li><a href="combos.html">Combos</a> </li> <!--Se mostrarán productos combinados entre sí, para fayor facilidad de selección-->
+                    <li><a href="">Ofertas</a> </li> <!--Esta sección será la más dinámica, ya que se realizarán cambios constantemente para ofrecer mejores precios a los clientes-->
+                    <li><a href="">Servicio al Cliente</a> </li> <!-- mostrará datos de contacto o para presentar alguna queja en caso de ser requerido-->
+                    <li><a href="registro.html">Registro</a> </li> <!-- muestra el perfil laboral/estudiantil del desarrollador y la finalidad de realizar esta página web-->
+                </ul>
+            </nav>
+        </header>
+
+        <section class="general registro">
+            <form action="paginaPrincipal.html" method="get">
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <h4>Registro</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtnombre" required>Nombre y Apellidos</label>
+                        </td>
+                        <td colspan="2">
+                            <input class="formulario" type="text" id="txtnombre" placeholder="Ingrese su nombre y apellidos">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <label for="txtcorreo" required>Correo</label>
+                        </td>
+                        <td>
+                            <input class="formulario" type="text" id="txtcorreo" placeholder="Ingrese su orreo">
+                        </td>
+                        <td>
+                            <label for="correo">@</label>
+                            <select class="correoDir"name="correo" id="correo">
+                                    <option value="gmail">gmail</option>
+                                    <option value="outlook">outlook</option>
+                                    <option value="yahoo">yahoo</option>
+                                    <option value="hotmail">hotmail</option>
+                            </select>
+                            <select class="correoDir" name="correo" id="correoDir">
+                                <option value="com">.com</option>
+                                <option value="es">.es</option>
+                                <option value="org">.org</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dedad">Fecha de Nacimiento  </label>
+                        </td>
+                        <td colspan="2">
+                            <input class="formulario" type="date" id="dedad">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtdir">Dirección</label>
+                        </td>
+                        <td colspan="2">
+                            <input class="formulario" type="text" id="txtdir" placeholder="Ingrese su dirección">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="contraseña" pattern="[a-zA-Z0-9]{6,15}" title="La contraseña debe incluir números y una 
+                            longitud de 8 caracteres" required>Contraseña</label>
+                        </td>
+                        <td>
+                            <input class="formulario" type="password" id="contraseña" placeholder="Ingrese una contraseña">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="confContraseña" required>Confirmar Contraseña</label>
+                        </td>
+                        <td>
+                            <input class="formulario" type="password" id="confContraseña" placeholder="Confirme la contraseña">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <p>Estoy de acuerdo con <a href="">Terminos y Condiciones </a><input type="checkbox"></p>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <p><a href="">Iniciar Sesión</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input class="boton" type="submit" name="resgistrarse" id="btregistrarse" value="Registrarse" >
+                        </td>
+                    </tr>
+                </table>
+                
+             </form>
+        </section>
+
+        <section class=" general barraMenu">
+
+        </section>
+        
+        <section class="general pie">
+
+        </section>
+    </section>
+</body>
+</html>
