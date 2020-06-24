@@ -1,66 +1,61 @@
 window.addEventListener('load', function()
 {
 
-   var doc = document, contenedor, operacion = '', resultado2;
-    
-   //función eval
-   function S(i){ return doc.getElementById(i); }
-   function res(){
-       resultado2 = eval(operacion);
-       cp.value = resultado2;
-       operacion = '';
-   }
+    var resultado, operacion="";
 
-   function as(bt) { 
-    operacion += bt.innerHTML;//Obtenemos el valor de cada botón
-    cp.value = operacion; //se muestra en pantalla la el valor de la operacion
+    function mostrarEnPantalla(valor){ //Tomamamos el valor de cada botón de acuerdo al id 
+        return document.getElementById(valor)
     }
 
-    function bclick(b) {
-        b.onclick = function() { as(b); }
+    uno = mostrarEnPantalla('uno');
+    dos = mostrarEnPantalla('dos');
+    tres = mostrarEnPantalla('tres');
+    cuatro = mostrarEnPantalla('cuatro');
+    cinco = mostrarEnPantalla('cinco');
+    seis = mostrarEnPantalla('seis');
+    siete = mostrarEnPantalla('siete');
+    ocho = mostrarEnPantalla('ocho');
+    nueve = mostrarEnPantalla('nueve');
+    cero = mostrarEnPantalla('cero');
+    suma = mostrarEnPantalla('suma');
+    resta = mostrarEnPantalla('resta');
+    multiplicacion = mostrarEnPantalla('multiplicacion');
+    division = mostrarEnPantalla('division');
+    punto = mostrarEnPantalla('punto');
+    igual = mostrarEnPantalla('igual');
+    borar = mostrarEnPantalla('borrar');
+    
+    function resultadoOperacion(){
+        resultado=eval(operacion);//alamacenamos en una variale el resultadod de la  operación con eval
+        pantalla.value=resultado;//asignamos el resultado para que se muestre en la pantalla 
+        operacion="";//vaciamos la función eval
     }
 
+    function mostrarOperacion(op){
+        operacion+=op.innerHTML; //concatenamos los valores que se quieren operar 
+        pantalla.value=operacion; //inidicamos que la pantalla mostrará la operación concatenada
+    }
 
-    //Asignamos a cada variable de acuerdo a los valores que tenemos en nuestra calculadora el parámetro que se va a introcucir en la funcion eval
-    cc = S('ccontenedor');
-    cp = S('cpantalla');
-    uno = S('uno');
-    dos = S('dos');
-    tres = S('tres');
-    cuatro = S('cuatro');
-    cinco = S('cinco');
-    seis = S('seis');
-    siete = S('siete');
-    ocho = S('ocho');
-    nueve = S('nueve');
-    cero = S('cero');
-    suma = S('suma');
-    resta = S('resta');
-    multiplicacion = S('multiplicacion');
-    division = S('division');
-    punto = S('punto');
-    igual = S('igual');
-    borar = S('borrar');
+    function hacerClick(val){
+        val.onclick=function(){ mostrarOperacion(val)}//Al hacer click en un botón comienza la función mostrarOperación de acuedo al botón seleccionado
+    }
 
-    bclick(uno);
-    bclick(dos);
-    bclick(tres);
-    bclick(cuatro);
-    bclick(cinco);
-    bclick(seis);
-    bclick(siete);
-    bclick(ocho);
-    bclick(nueve);
-    bclick(cero);
-    bclick(multiplicacion);
-    bclick(suma);
-    bclick(resta);
-    bclick(punto);
-    bclick(division);
-	borrar.onclick = function(){ operacion = resultado2 = cp.value = ''; }//Inidcamos que en la pantalla no se mostrará nada
-	igual.onclick = res;
-    
-                
-   
-      
+    hacerClick(uno);//A cada botón le ubicamos la función al hacer click
+    hacerClick(dos);
+    hacerClick(tres);
+    hacerClick(cuatro);
+    hacerClick(cinco);
+    hacerClick(seis);
+    hacerClick(siete);
+    hacerClick(ocho);
+    hacerClick(nueve);
+    hacerClick(cero);
+    hacerClick(multiplicacion);
+    hacerClick(suma);
+    hacerClick(resta);
+    hacerClick(punto);
+    hacerClick(division);
+	borrar.onclick = function(){ operacion = resultado = pantalla.value = '' }//Inidcamos que en la pantalla no se mostrará nada
+	igual.onclick = resultadoOperacion;
+       
 })
