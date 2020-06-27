@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding:0px;
+   
 }
 .general
 {
@@ -27,23 +28,52 @@
 
 .cabecera{
     grid-area: cabecera;
-    font-family: serif;
+    font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
-
     width:100%;
-    text-align: center;/*Centramos el titulo */
-    padding:auto;
-    
     
 }
 
-.compra{
-    text-decoration: none;
+
+.cabecera button{
+    width: 100%;
+    background: rgb(11, 11, 49);
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    margin: 16px 0;
+    font-size: 18px ;
+    border:"none";
+    font-family:  serif;
 }
+.cabecera a{
+    text-decoration: none;
+    color: black ;
+    font-family:  serif;
+    font-size: 18px;
+ }
+
+.cabecera input{
+    width: 100%;
+    background-color:white;
+    padding: 10px;
+    border-radius:4px ;
+    font-family:  serif;
+   
+    border: 1px solid rgb(40, 40, 136) ;
+    font-size: 18px;
+    color: black;
+}
+
+.cabecera td{
+    border-spacing: 0px;
+   
+}
+
 #menu{
     grid-area: menu;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-family: serif;
+    font-size: 20px;
     text-align:center;
 
    
@@ -91,16 +121,18 @@ ul, ol{
     position: relative;
 }
 
-.video
+.video 
 {
     grid-area: video;
+ 
+    
 }
 
 .ordenar{
     background-color: rgb(11, 11, 49);
     grid-area: ordenar;
     width: 100%;
-    font-family: serif;
+    font-family:  serif;
     font-size: 15px;
     text-align: left;
     color: white;
@@ -113,17 +145,20 @@ ul, ol{
     width: 100%;
     border-spacing: 6px;
     border: 1px solid rgb(11, 11, 49);
+    font-family:  serif;
 }
 
 
 .ordenar td{
     width: 50%;
     border: rgb(11, 11, 49) 4px solid;
+    font-family:  serif;
     
 }
 
 #texto1{
     font-size: 20px;
+    font-family:  serif;
 
 }
 
@@ -132,7 +167,7 @@ ul, ol{
     grid-area: contenido;
     width: 100%;
     padding: 10px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: serif;
     font-size: 15px;
     
 }
@@ -158,6 +193,7 @@ ul, ol{
 .sub{
     background-color: #eff2f6;
     padding: 20px;
+    font-family:  serif;
     
 }
 
@@ -171,6 +207,7 @@ ul, ol{
     color:white;
     border-radius: 6px;
     border: 1px solid white;
+    font-family:  serif;
     
     
 }
@@ -182,7 +219,7 @@ ul, ol{
 
     border-spacing: 6px;
     border: 1px solid #eff2f6;
-
+    font-family:  serif;
     text-align: left;
     font-size: 20px;  
     
@@ -198,6 +235,7 @@ ul, ol{
     height: 30px;
     overflow:hidden;
     border-radius : 20px;
+    font-family:  serif;
 }
 
 progress::-webkit-progress-value {
@@ -223,6 +261,7 @@ progress::-webkit-progress-bar {
     width: 100%;
     border-spacing: 6px;
     border: 1px solid #eff2f6;
+    font-family:  serif;
 }
 .seccion2{
     grid-area: seccion2;
@@ -296,14 +335,17 @@ progress::-webkit-progress-bar {
     background-color: rgb(11, 11, 49);
     text-decoration: none;
     color:white;
+    font-family:  serif;
 }
 
 .pie{
     border-radius: 10px;
+
 }
 .pie a{
     text-decoration: none;
     color:white;
+    font-family:  serif;
     
 }
 

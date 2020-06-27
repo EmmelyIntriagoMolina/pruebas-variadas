@@ -6,7 +6,6 @@
 
 .general
 {
- 
     padding: 10px;
     
 }
@@ -19,16 +18,16 @@
     
     text-decoration: none;
 
-    grid-template-areas:"cabecera cabecera"
-                        "registro barraMenu"
-                        "pie pie";
+    grid-template-areas:"cabecera"
+                        "registro"
+                        "pie";
 }
 
 .cabecera{
     grid-area: cabecera;
     font-family: serif;
     text-decoration: none;
-
+    font-family: serif;
     width:100%
 }
 
@@ -38,36 +37,37 @@
 
 .registro table{
     padding:10px;
-    width: 100%;
+    width: 70%;
     border-spacing: 6px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: serif;
     font-size: 20px;
     background-color:white;
     margin: auto;
-    margin-top: 0px;
-    margin-left: 18px;
-    color: black;
+    margin-top: 30px;
     
-
+    color: black;
 }
 
 .formulario{
-    width: 89%;
+    width: 50%;
     background-color:white;
     padding: 10px;
     border-radius:4px ;
     margin-bottom: 16px;
     border: 1px solid rgb(40, 40, 136) ;
-    font-size: 18px;
+    font-size: 20px;
     color: black;
+    font-family: serif;
 }
 
 .correoDir{
+    width: 18%;
     margin-bottom: 16px;
     border: 1px solid rgb(40, 40, 136);
     padding: 10px;
     border-radius:4px ; 
-    font-size: 18px;
+    font-size: 20px;
+    font-family: serif;
 }
 
 .registro p{
@@ -84,6 +84,7 @@
     text-decoration: none;
     background: white;
     font-size: 20px;
+    font-family: serif;
 
 
 }
@@ -91,6 +92,7 @@
 .registro a:hover{
     color: black;
     text-decoration: underline;
+    font-family: serif;
     
 }
 
@@ -102,60 +104,63 @@
     color: white;
     margin: 16px 0;
     font-size: 22px ;
-    
+    font-family: serif;
+}
 
+.boton:hover{
+background: rgb(40, 40, 136) ;
 }
 .registro h4{
-    font-size: 40px;
+    font-size: 35px;
     text-align: left;
     margin-bottom: 22px;
     background: white;
     color: black;
+    font-family: serif;
 }
 
 .registro label{
     color: black;
     background: white;
-    font-size: 20px;
+    font-size: 22px;
+    font-family: serif;
 }
 
 .registro td{
     background: wihte;
+    font-family: serif;
 }
 
-
-
-
-.barraMenu{
-    grid-area: barraMenu;
-}
 
 .pie{
     grid-area: pie;
+    font-family: serif;
 }
 #menu{
     grid-area: menu;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-family: serif;
+    font-size: 20px;
     text-align:center;
 
-   
     padding:0px 30px;/*Anchura del menú */
     margin:0px;
  }
 
 ul, ol{
     list-style: none; /*Quitamos los estilos de lista */
+    font-family: serif;
 }
 
 .lista{
     display: flex;
+    font-family: serif;
 }
 
 .lista > li{
     
     text-align: left; /*Ubicamos el texto del submenú a la izquierda */
     width: 100%;
+    font-family: serif;
 }
 
 .lista li a{  /*Establecemos el formato para el submenú con sus respectivos enlaces */
@@ -165,6 +170,7 @@ ul, ol{
     text-decoration:none; /*Permite quitar decoraciones al texto del submenú */
     padding:12px 50px;
     display:block;
+    font-family: serif;
 }
 
 .lista li a:hover{ /*Color del submenú al pasar el mouse */

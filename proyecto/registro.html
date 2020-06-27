@@ -40,7 +40,7 @@
                 <table>
                     <tr>
                         <td colspan="3">
-                            <h4>Registro</h4>
+                            <h4>Formulario Registro</h4>
                         </td>
                     </tr>
                     <tr>
@@ -55,22 +55,19 @@
                         <td >
                             <label for="txtcorreo" required>Correo</label>
                         </td>
-                        <td>
-                            <input class="formulario" type="text" id="txtcorreo" placeholder="Ingrese su orreo">
-                        </td>
-                        <td>
-                            <label for="correo">@</label>
+                        <td >
+                            <input class="formulario" type="text" id="txtcorreo" placeholder="Ingrese su orreo">@
                             <select class="correoDir"name="correo" id="correo">
-                                    <option value="gmail">gmail</option>
-                                    <option value="outlook">outlook</option>
-                                    <option value="yahoo">yahoo</option>
-                                    <option value="hotmail">hotmail</option>
+                                <option value="gmail">gmail</option>
+                                <option value="outlook">outlook</option>
+                                <option value="yahoo">yahoo</option>
+                                <option value="hotmail">hotmail</option>
                             </select>
                             <select class="correoDir" name="correo" id="correoDir">
                                 <option value="com">.com</option>
                                 <option value="es">.es</option>
                                 <option value="org">.org</option>
-                        </select>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -94,7 +91,7 @@
                             <label for="contraseña" pattern="[a-zA-Z0-9]{6,15}" title="La contraseña debe incluir números y una 
                             longitud de 8 caracteres" required>Contraseña</label>
                         </td>
-                        <td>
+                        <td colspan="2">
                             <input class="formulario" type="password" id="contraseña" placeholder="Ingrese una contraseña">
                         </td>
                     </tr>
@@ -102,7 +99,7 @@
                         <td>
                             <label for="confContraseña" required>Confirmar Contraseña</label>
                         </td>
-                        <td>
+                        <td colspan="2">
                             <input class="formulario" type="password" id="confContraseña" placeholder="Confirme la contraseña">
                         </td>
                     </tr>
@@ -125,10 +122,6 @@
                 </table>
                 
              </form>
-        </section>
-
-        <section class=" general barraMenu">
-
         </section>
         
         <section class="general pie">
