@@ -1,39 +1,51 @@
 *{
     margin: 0px;
     padding:0px;
+
+ 
    
 }
 .general
 {
     background-color: white;
     padding: 10px;
+    font-family: serif;
     
 }
 .contenedor
 {
     display: grid;
-    grid-template: 50px 50px 50px 1fr 100px;
-    grid-template-columns: 195px 1fr;
+    grid-template: 50px 50px 1fr 100px;
+    grid-template-columns: 100%;
     
     
     text-decoration: none;
 
-    grid-template-areas:"cabecera cabecera"
-                        "menu menu"
-                        "video video"
-                        "ordenar contenido"
-                        "pie pie";
-    
+    grid-template-areas:"cabecera "
+                        "menu "
+                        "video"
+                        "submenu"
+                        "pie";
 }
 
 .cabecera{
     grid-area: cabecera;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: serif;
     text-decoration: none;
     width:100%;
     
 }
 
+.cabecera form{
+    width: 98%;
+    font-family: serif;
+}
+
+.cabecera table{
+    width: 100%;
+    text-align: right;
+    font-family:  serif;
+}
 
 .cabecera button{
     width: 100%;
@@ -46,6 +58,7 @@
     border:"none";
     font-family:  serif;
 }
+
 .cabecera a{
     text-decoration: none;
     color: black ;
@@ -75,11 +88,8 @@
     font-family: serif;
     font-size: 20px;
     text-align:center;
-
-   
-    padding:0px 30px;/*Anchura del menú */
-    margin:0px;
- }
+    width: 98.5%;
+}
 
 ul, ol{
     list-style: none; /*Quitamos los estilos de lista */
@@ -123,231 +133,77 @@ ul, ol{
 
 .video 
 {
-    grid-area: video;
- 
-    
+    grid-area: video;   
 }
 
-.ordenar{
-    background-color: rgb(11, 11, 49);
-    grid-area: ordenar;
-    width: 100%;
-    font-family:  serif;
-    font-size: 15px;
-    text-align: left;
-    color: white;
-    border-radius: 35px;
+/* SUBNMENU*/
+.submenu{
+    grid-area: submenu;
 
 }
 
-.ordenar table {
-    padding:10px;
-    width: 100%;
-    border-spacing: 6px;
-    border: 1px solid rgb(11, 11, 49);
-    font-family:  serif;
-}
-
-
-.ordenar td{
-    width: 50%;
-    border: rgb(11, 11, 49) 4px solid;
-    font-family:  serif;
-    
-}
-
-#texto1{
-    font-size: 20px;
-    font-family:  serif;
-
-}
-
-/*AREA DE CONTENIDO */
-.contenido{
-    grid-area: contenido;
-    width: 100%;
-    padding: 10px;
-    font-family: serif;
-    font-size: 15px;
-    
-}
-
-.contenido{
+.contenedorSubmenu{
     display: grid;
-    grid-template: 300px, 300px, 300px, 300px, 300px, 300px;
-    grid-template-columns: 100px, 100px, 100px;
-    
-    
-    
-    
+    grid-template: 50% 50%;
+    grid-template-columns: 17% 17% 17% 17% 17% 1fr;
     text-decoration: none;
 
-    grid-template-areas:"seccion1 seccion2 seccion3"
-                        "seccion4 seccion5 seccion6"
-                        "seccion7 seccion8 seccion9"
-                        "seccion10 seccion11 seccion12"
-                        "seccion13 seccion14 seccion15"
-                        "seccion16 seccion17 seccion18";               
+    grid-template-areas:"submenu1 submenu2 submenu3 submenu4 submenu5 submenu6"
+                        "cuadroOfertas cuadroOfertas cuadroOfertas cuadroOfertas cuadroOfertas cuadroOfertas";
 }
 
-.sub{
-    background-color: #eff2f6;
-    padding: 20px;
-    font-family:  serif;
-    
-}
-
-#bt1{
-
-    text-decoration: none;
-    width:110px;
-    height: 40px;
-    font-weight: 600;
-    background-color: rgb(11, 11, 49);
-    color:white;
-    border-radius: 6px;
-    border: 1px solid white;
-    font-family:  serif;
-    
-    
-}
-
-.sub table{
-    grid-area: seccion1;
-    padding:20px;
-    width: 100%;
-
-    border-spacing: 6px;
-    border: 1px solid #eff2f6;
-    font-family:  serif;
-    text-align: left;
-    font-size: 20px;  
-    
-}
-
-
-#seccion1{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    width: 150px;
-    height: 30px;
-    overflow:hidden;
-    border-radius : 20px;
-    font-family:  serif;
-}
-
-progress::-webkit-progress-value {
-    background: rgb(11, 11, 49);
-    border-radius : 20px;  
-}
-
-progress::-webkit-progress-bar {
-    background-color:#D8D8D8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; 
-    border-radius : 20px ;         
-}
-
-.seccion1 td{
-    width: 50%;
+.iconos{
     font-family: serif;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px solid;
+    border-color: skyblue;
+    text-align:center;
+    padding: 10px;
 }
 
+.iconos:hover{
+    background-color: skyblue;
+}
 
-
-.comprar{
-    padding:30px;
+.cuadroOfertas{
+    grid-area: cuadroOfertas;
     width: 100%;
-    border-spacing: 6px;
-    border: 1px solid #eff2f6;
+}
+
+
+.submenu label{
+    font-family: serif;
+    font-size: 29px;
+    color: rgb(11, 11, 49);
+    font-weight: bold;
+}
+
+.contenedorSubmenu label{
     font-family:  serif;
-}
-.seccion2{
-    grid-area: seccion2;
-}
-
-.seccion3{
-    grid-area: seccion3;
+    font-size: 29px;
+    color: rgb(11, 11, 49);
+    font-weight: bold;
 }
 
-.seccion4{
-    grid-area: seccion4;
-}
-
-.seccion5{
-    grid-area: seccion5;
-}
-
-.seccion6{
-    grid-area: seccion6;
-}
-
-.seccion7{
-    grid-area: seccion7;
-}
-
-.seccion8{
-    grid-area: seccion8;
-}
-
-.seccion9{
-    grid-area: seccion9;
-}
-
-.seccion10{
-    grid-area: seccion10;
-}
-
-.seccion11{
-    grid-area: seccion11;
-}
-
-.seccion12{
-    grid-area: seccion12;
-}
-
-.seccion13{
-    grid-area: seccion13;
-}
-
-.seccion14{
-    grid-area: seccion14;
-}
-
-.seccion15{
-    grid-area: seccion15;
-}
-
-.seccion16{
-    grid-area: seccion16;
-}
-
-.seccion17{
-    grid-area: seccion17;
-}
-
-.seccion18{
-    grid-area: seccion18;
-}
 .pie{
     grid-area: pie;
     background-color: rgb(11, 11, 49);
     text-decoration: none;
     color:white;
     font-family:  serif;
+    position: relative;
+    font-family: serif;
 }
 
-.pie{
-    border-radius: 10px;
-
-}
 .pie a{
+    font-family: serif;
     text-decoration: none;
     color:white;
     font-family:  serif;
     
 }
+
 
 
 

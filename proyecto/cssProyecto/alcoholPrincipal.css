@@ -1,0 +1,125 @@
+.ordenar{
+    background-color: rgb(11, 11, 49);
+    grid-area: ordenar;
+    width: 100%;
+    font-family:  serif;
+    font-size: 15px;
+    text-align: left;
+    color: white;
+    border-radius: 35px;
+
+}
+
+.ordenar table {
+    padding:10px;
+    width: 100%;
+    border-spacing: 6px;
+    border: 1px solid rgb(11, 11, 49);
+    font-family:  serif;
+}
+
+
+.ordenar td{
+    width: 50%;
+    border: rgb(11, 11, 49) 4px solid;
+    font-family:  serif;
+    
+}
+
+#texto1{
+    font-size: 20px;
+    font-family:  serif;
+
+}
+
+/*AREA DE CONTENIDO */
+.contenido{
+    grid-area: contenido;
+    width: 100%;
+    padding: 10px;
+    font-family: serif;
+    font-size: 15px;
+    
+}
+
+.contenido{
+    display: grid;
+    grid-template: 300px, 300px, 300px, 300px, 300px, 300px;
+    grid-template-columns: 100px, 100px, 100px;
+    
+    
+    
+    
+    text-decoration: none;
+
+    grid-template-areas:"seccion1 seccion2 seccion3"
+                        "seccion4 seccion5 seccion6"
+                        "seccion7 seccion8 seccion9"
+                        "seccion10 seccion11 seccion12"
+                        "seccion13 seccion14 seccion15"
+                        "seccion16 seccion17 seccion18";               
+}
+
+.sub{
+    background-color: #eff2f6;
+    padding: 20px;
+    font-family:  serif;
+    
+}
+
+#bt1{
+
+    text-decoration: none;
+    width:110px;
+    height: 40px;
+    font-weight: 600;
+    background-color: rgb(11, 11, 49);
+    color:white;
+    border-radius: 6px;
+    border: 1px solid white;
+    font-family:  serif;
+    
+    
+}
+
+.sub table{
+    grid-area: seccion1;
+    padding:20px;
+    width: 100%;
+
+    border-spacing: 6px;
+    border: 1px solid #eff2f6;
+    font-family:  serif;
+    text-align: left;
+    font-size: 20px;  
+    
+}
+
+
+#seccion1{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 150px;
+    height: 30px;
+    overflow:hidden;
+    border-radius : 20px;
+    font-family:  serif;
+}
+
+progress::-webkit-progress-value {
+    background: rgb(11, 11, 49);
+    border-radius : 20px;  
+}
+
+progress::-webkit-progress-bar {
+    background-color:#D8D8D8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; 
+    border-radius : 20px ;         
+}
+
+.seccion1 td{
+    width: 50%;
+    font-family: serif;
+}
