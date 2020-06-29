@@ -188,7 +188,7 @@ ul, ol{
 
 .pie{
     grid-area: pie;
-    background-color: rgb(11, 11, 49);
+    background-color: rgba(18, 18, 75, 0.973);
     text-decoration: none;
     color:white;
     font-family:  serif;

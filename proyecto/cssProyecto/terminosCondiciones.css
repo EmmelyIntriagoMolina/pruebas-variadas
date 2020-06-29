@@ -1,0 +1,38 @@
+
+body label{
+    font-family: serif;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: rgb(11, 11, 49);
+    font-weight: bold;
+    
+}
+
+li {
+    font-family: serif;
+    color: rgb(11, 11, 49);
+    font-weight: bold;
+}
+
+p{
+    font-weight: normal;
+}
+
+button{
+    text-decoration: none;
+    background: rgb(11, 11, 49);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 22px ;
+    font-family: serif;
+}
+
+button:hover{
+background: rgb(40, 40, 136) ;
+}
+
+button a{
+    text-decoration: none;
+}
