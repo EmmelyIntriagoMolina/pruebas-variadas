@@ -93,10 +93,12 @@
 
 ul, ol{
     list-style: none; /*Quitamos los estilos de lista */
+    font-family: serif;
 }
 
 .lista{
     display: flex;
+    font-family: serif;
 }
 
 .lista > li{
@@ -108,10 +110,10 @@ ul, ol{
 .lista li a{  /*Establecemos el formato para el submenú con sus respectivos enlaces */
     background-color:rgb(11, 11, 49);
     color:#fff;
-    border: red;
     text-decoration:none; /*Permite quitar decoraciones al texto del submenú */
     padding:12px 50px;
     display:block;
+    font-family: serif;
 }
 
 .lista li a:hover{ /*Color del submenú al pasar el mouse */

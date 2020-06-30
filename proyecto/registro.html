@@ -30,13 +30,13 @@
                     <li><a href="combos.html">Ofertas</a> </li>   
                     <li><a href="">Servicio al Cliente</a> </li> <!--Se mostrarán productos combinados entre sí, para fayor facilidad de selección-->
                     <li><a href="registro.html">Registro</a> </li> <!-- mostrará datos de contacto o para presentar alguna queja en caso de ser requerido-->
-                    <li><a href="">Iniciar Sesión</a> </li> <!-- muestra el perfil laboral/estudiantil del desarrollador y la finalidad de realizar esta página web-->
+                    <li><a href="iniciarSesion.html">Iniciar Sesión</a> </li> <!-- muestra el perfil laboral/estudiantil del desarrollador y la finalidad de realizar esta página web-->
                 </ul>
             </nav>
         </header>
 
         <section class="general registro">
-            <form action="#" method="post">
+            <form action="paginaPrincipal.html" method="get">
                 <table>
                     <tr>
                         <td colspan="3">
@@ -45,18 +45,26 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="txtnombre" required>Nombre y Apellidos</label>
+                            <label for="txtnombre">Nombre y Apellidos</label>
                         </td>
                         <td colspan="2">
-                            <input class="formulario" type="text" id="txtnombre" placeholder="Ingrese su nombre">
+                            <input class="formulario" type="text" id="txtnombre" placeholder="Ingrese su nombre"  required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtcedula">Cédula</label>
+                        </td>
+                        <td>
+                            <input class="formulario" type="text" id="txtcedula" placeholder="Ingrese su cédula" required>
                         </td>
                     </tr>
                     <tr>
                         <td >
-                            <label for="txtcorreo" required>Correo</label>
+                            <label for="txtcorreo" >Correo</label>
                         </td>
                         <td >
-                            <input class="formulario" type="text" id="txtcorreo" placeholder="Ingrese su orreo">@
+                            <input class="formulario" type="text" id="txtcorreo" placeholder="Ingrese su orreo" required>@
                             <select class="correoDir"name="correo" id="correo">
                                 <option value="gmail">gmail</option>
                                 <option value="outlook">outlook</option>
@@ -81,31 +89,32 @@
                     
                     <tr>
                         <td>
-                            <label for="contraseña" pattern="[a-zA-Z0-9]{6,15}" title="La contraseña debe incluir números y una 
-                            longitud de 8 caracteres" required>Contraseña</label>
+                            <label for="contraseña">Contraseña</label>
                             
                         </td>
                         <td colspan="2">
-                            <input class="formulario" type="password" id="contraseña" placeholder="Ingrese una contraseña">
+                            <input class="formulario" type="password" id="contraseña" placeholder="Ingrese una contraseña" required pattern="[a-zA-Z0-9]{6,15}" title="La contraseña debe incluir números y una 
+                            longitud de 8 caracteres">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="confContraseña" required>Confirmar Contraseña</label>
+                            <label for="confContraseña" >Confirmar Contraseña</label>
                         </td>
                         <td colspan="2">
-                            <input class="formulario" type="password" id="confContraseña" placeholder="Confirme la contraseña">
+                            <input class="formulario" type="password" id="confContraseña" placeholder="Confirme la contraseña" required pattern="[a-zA-Z0-9]{6,15}" title="La contraseña debe incluir números y una 
+                            longitud de 8 caracteres">
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <p>Estoy de acuerdo con <a href="../proyecto/terminosCondiciones.html">Terminos y Condiciones </a><input type="checkbox"></p>
+                            <p>Estoy de acuerdo con <a href="../proyecto/terminosCondiciones.html">Terminos y Condiciones </a><input type="checkbox" required></p>
                             
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <p><a href="">Iniciar Sesión</a></p>
+                            <p><a href="iniciarSesion.html">Iniciar Sesión</a></p>
                         </td>
                     </tr>
                     <tr>

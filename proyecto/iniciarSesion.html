@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../proyecto/cssProyecto/iniciarSesion.css">
+    <script src="../proyecto/javaScriptProyecto/iniciarSesion.js"></script>
+</head>
+<body>
+        <section class="registro">
+            <form name="login" action="paginaPrincipal.html" method="get">
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <h4>Iniciar Sesión</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtnombre">Usuario</label>
+                        </td>
+                        <td colspan="2">
+                            <input class="formulario" type="text" name="usuario"id="txtnombre" placeholder="Ingrese su nombre"  required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="contraseña">Contraseña</label>
+                            
+                        </td>
+                        <td colspan="2">
+                            <input class="formulario" type="password" name="contraseña" id="contraseña" placeholder="Ingrese una contraseña" required pattern="[a-zA-Z0-9]{6,15}" title="La contraseña debe incluir números y una 
+                            longitud de 8 caracteres">
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td colspan="3">
+                            <input class="boton" type="submit" name="resgistrarse" id="btregistrarse" 
+                            value="Iniciar Sesión" onclick="Login()">
+                        </td>
+                    </tr>
+                </table>
+                
+             </form>
+        
+</body>
+</html>
