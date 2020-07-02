@@ -3,9 +3,14 @@ window.addEventListener('load', function()
 
     txtcedula.addEventListener('blur', function()
     {
-        if(txtcedula.length!=10)
+        mensajeCedula.innerHTML=""
+        if(txtcedula.value.length!=10)
         {
-            mensajeCedula.innerHTML="El número de carcteres debe ser de 10"
+            mensajeCedula.innerHTML+="El número de carcteres debe ser de 10 <br>"
+        }
+        if (!validarCedula(txtcedula.value))
+        {
+            mensajeCedula.innerHTML+="No cumple los criterios de validacion del Registro Civil <br>"
         }
     
     })
