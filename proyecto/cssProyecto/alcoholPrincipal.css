@@ -1,3 +1,143 @@
+*{
+    margin: 0px;
+    padding:0px;
+
+}
+
+.general
+{
+    background-color: white;
+    padding: 40px;
+    
+}
+
+.contenedor
+{
+  
+    display: grid;
+    grid-template: 50px 50px 1fr 50px;
+    grid-template-columns: 300px 1fr;
+    border: 0px;
+    
+    text-decoration: none;
+
+    grid-template-areas:"cabecera cabecera"
+                        "menu menu"
+                        "ordenar contenido"
+                        "pie pie";
+    
+}
+
+
+.cabecera{
+    grid-area: cabecera;
+    font-family: serif;
+    text-decoration: none;
+    width:95%;
+   
+    
+}
+
+.cabecera form{
+    width: 98%;
+    font-family: serif;
+    margin-top: -30px;
+    margin-bottom: -40px;
+}
+
+.cabecera table {
+    width: 100%;
+    text-align: right;
+    font-family:  serif;
+}
+
+.cabecera button{
+    width: 100%;
+    background: rgb(11, 11, 49);
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    margin: 16px 0;
+    font-size: 18px ;
+    border:"none";
+    font-family:  serif;
+}
+
+.cabecera a{
+    text-decoration: none;
+    color: black ;
+    font-family:  serif;
+    font-size: 18px;
+ }
+
+.cabecera input{
+    width: 100%;
+    background-color:white;
+    padding: 10px;
+    border-radius:4px ;
+    font-family:  serif;
+   
+    border: 1px solid rgb(40, 40, 136) ;
+    font-size: 18px;
+    color: black;
+}
+
+.cabecera td{
+    border-spacing: 0px;
+   
+}
+#menu{
+    grid-area: menu;
+    font-family: serif;
+    font-size: 20px;
+    text-align:center;
+    width: 94.8%;
+    margin-bottom: 15px;
+    padding:0px 30px;/*Anchura del menú */
+    margin:0px;
+ }
+
+ul, ol{
+    list-style: none; /*Quitamos los estilos de lista */
+}
+
+.lista{
+    display: flex;
+}
+
+.lista > li{
+    
+    text-align: left; /*Ubicamos el texto del submenú a la izquierda */
+    width: 100%;
+}
+
+.lista li a{  /*Establecemos el formato para el submenú con sus respectivos enlaces */
+    background-color:rgb(11, 11, 49);
+    color:#fff;
+    text-decoration:none; /*Permite quitar decoraciones al texto del submenú */
+    padding:12px 50px;
+    display:block;
+}
+
+.lista li a:hover{ /*Color del submenú al pasar el mouse */
+    background-color: rgb(40, 40, 136) ;
+    
+}
+
+.lista li ul{ /*Ocultamos el submenú */
+    display:none;
+    position:absolute;
+    z-index:2;/*Permite superponer el submenu del menu, el numero 2 representa la segunda capa del menu */
+}
+
+.lista li:hover > ul{ /*Aparecemos el submenú al pasar el mouse por la sección del menú a la que pertenece*/
+    display: block;
+}
+
+.lista li ul li{
+    position: relative;
+}
+
 .ordenar{
     background-color: rgb(11, 11, 49);
     grid-area: ordenar;
@@ -122,4 +262,22 @@ progress::-webkit-progress-bar {
 .seccion1 td{
     width: 50%;
     font-family: serif;
+}
+
+.pie{
+    grid-area: pie;
+    background-color: rgba(18, 18, 75, 0.973);
+    text-decoration: none;
+    color:white;
+    font-family:  serif;
+    position: relative;
+    font-family: serif;
+}
+
+.pie a{
+    font-family: serif;
+    text-decoration: none;
+    color:white;
+    font-family:  serif;
+    
 }
