@@ -93,7 +93,7 @@
     text-align:center;
     width: 94.8%;
    
-    padding:0px 30px;/*Anchura del menú */
+    padding:1px 30px;/*Anchura del menú */
     margin:0px;
  }
 
@@ -127,6 +127,7 @@ ul, ol{
 .lista li ul{ /*Ocultamos el submenú */
     display:none;
     position:absolute;
+
     z-index:2;/*Permite superponer el submenu del menu, el numero 2 representa la segunda capa del menu */
 }
 
@@ -139,19 +140,37 @@ ul, ol{
 }
 
 /* SECCION ORDENAR*/
-.ordenar table {
-    padding:30px;
+.ordenar{
+    background-color: rgb(11, 11, 49);
+    grid-area: ordenar;
     width: 100%;
-    border-spacing: 6px;
-    border: 1px solid white;
+    font-family:  serif;
+    font-size: 15px;
+    text-align: left;
+    color: white;
+   
+
 }
 
+.ordenar table {
+    padding:10px;
+    width: 100%;
+    border-spacing: 6px;
+    border: 1px solid rgb(11, 11, 49);
+    font-family:  serif;
+}
+
+
 .ordenar td{
-    border: white 4px solid;
+    width: 50%;
+    border: rgb(11, 11, 49) 4px solid;
+    font-family:  serif;
+    
 }
 
 #texto1{
     font-size: 20px;
+    font-family:  serif;
 
 }
 
@@ -190,7 +209,7 @@ ul, ol{
     
 }
 
-#bt1{
+.bt1{
 
     text-decoration: none;
     width:110px;
@@ -251,7 +270,7 @@ progress::-webkit-progress-bar {
 
 .pie{
     grid-area: pie;
-    background-color: rgba(18, 18, 75, 0.973);
+    background-color: rgb(11, 11, 49);
     text-decoration: none;
     color:white;
     font-family:  serif;

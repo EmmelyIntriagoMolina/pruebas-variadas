@@ -4,38 +4,38 @@
 
 }
 
+/* CONTENEDOR*/
+
 .contenedor
 {
-  
     display: grid;
-    grid-template: 50px 50px 1fr 50px;
-    grid-template-columns: 300px 1fr;
-    border: 0px;
+    grid-template: 50px 50px 1fr 1fr;
+    grid-template-columns: 100%;
+ 
     
     text-decoration: none;
 
-    grid-template-areas:"cabecera cabecera"
-                        "menu menu"
-                        "redes contenido"
-                        "pie pie";
-    
+    grid-template-areas:"cabecera "
+                        "menu "
+                        "carrito";
 }
 
+/*CABECERA */
 
-/* CABECERA*/
 .cabecera{
     grid-area: cabecera;
     font-family: serif;
+    text-decoration: none;
+    width:100%;
+    
 }
 
 .cabecera form{
     width: 98%;
     font-family: serif;
-    margin-top: -30px;
-    margin-bottom: -40px;
 }
 
-.cabecera table {
+.cabecera table{
     width: 100%;
     text-align: right;
     font-family:  serif;
@@ -77,23 +77,26 @@
    
 }
 
-/* MENU*/
+
+/*MENÚ */
+
+
 #menu{
     grid-area: menu;
     font-family: serif;
     font-size: 20px;
     text-align:center;
-    
-    padding:1px 30px;/*Anchura del menú */
-    margin:0px;
- }
+    width: 98.5%;
+}
 
 ul, ol{
     list-style: none; /*Quitamos los estilos de lista */
+    font-family: serif;
 }
 
 .lista{
     display: flex;
+    font-family: serif;
 }
 
 .lista > li{
@@ -108,13 +111,13 @@ ul, ol{
     text-decoration:none; /*Permite quitar decoraciones al texto del submenú */
     padding:12px 50px;
     display:block;
+    font-family: serif;
 }
 
 .lista li a:hover{ /*Color del submenú al pasar el mouse */
     background-color: rgb(40, 40, 136) ;
     
 }
-
 .lista li ul{ /*Ocultamos el submenú */
     display:none;
     position:absolute;
@@ -124,33 +127,83 @@ ul, ol{
 .lista li:hover > ul{ /*Aparecemos el submenú al pasar el mouse por la sección del menú a la que pertenece*/
     display: block;
 }
-
 .lista li ul li{
     position: relative;
 }
 
-.redes{
-    grid-area: redes;
-}
+/*REPORTE */
 
-.contenido{
-    grid-area: contenido;
+.carrito .titulo{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: serif;
+    font-size: 20px;
+    font-weight: bold;
 }
-
-.pie{
-    grid-area: pie;
+#btnGenerarReporte{
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
     background-color: rgb(11, 11, 49);
-    text-decoration: none;
     color:white;
+    border-radius: 6px;
+    border: 1px solid white;
     font-family:  serif;
-    position: relative;
-    font-family: serif;
+}
+#btnGenerarReporte:hover{
+    background-color: rgb(40, 40, 136) 
 }
 
-.pie a{
-    font-family: serif;
+#btnFinalizar{
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-decoration: none;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    background-color: rgb(11, 11, 49);
     color:white;
+    border-radius: 6px;
+    border: 1px solid white;
     font-family:  serif;
-    
 }
+
+#btnFinalizar:hover{
+    background-color: rgb(40, 40, 136) 
+}
+
+#divReporte table{
+    margin-left: 5px;
+    margin-right: 24px;
+    width:75%;
+    border-collapse: collapse;
+    border: 1px solid #cfcfcf;
+}
+
+#divReporte table thead th td{
+    padding: 16px;
+    text-align: start;
+    border-bottom: 1px solid #cfcfcf;
+    background: #cfcfcf;
+}
+
+#divReporte table tr th{
+    padding: 16px;
+    text-align: start;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+#divReporte table tr td:first-child {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    padding-left: 34px;
+    text-align: start;
+    border-bottom: 1px solid #cfcfcf;
+  }

@@ -93,7 +93,7 @@
     text-align:center;
     width: 94.8%;
     margin-bottom: 15px;
-    padding:0px 30px;/*Anchura del menú */
+    padding:1px 30px;/*Anchura del menú */
     margin:0px;
  }
 
@@ -146,7 +146,7 @@ ul, ol{
     font-size: 15px;
     text-align: left;
     color: white;
-    border-radius: 35px;
+   
 
 }
 
@@ -266,7 +266,7 @@ progress::-webkit-progress-bar {
 
 .pie{
     grid-area: pie;
-    background-color: rgba(18, 18, 75, 0.973);
+    background-color: rgb(11, 11, 49);
     text-decoration: none;
     color:white;
     font-family:  serif;

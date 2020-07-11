@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venta de Insumos</title>
     <link rel="stylesheet" href="./cssProyecto/paginaPrincipal.css">
-    <script src="./javaScriptProyecto/paginaPrincipal.js"></script>
+    
+    <script src="./javaScriptProyecto/paginaPrincipal.js"></script>    
+
 </head>
 <body>
 
     <section class="contenedor">
         <!--CABECERA-->
         <header class="general cabecera">
-            <form action="" method="">	
+            <form action="busqueda.html" method="">	
                 <table>
                     <tr>
                         <td rowspan="2">
@@ -22,7 +24,7 @@
                             <button>Buscar</button>
                         </td>
                         <td>
-                            <img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" >
+                            <a href="compra.html"><img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" ></a>
                         </td>
                         <tr>
                             <td>
@@ -40,13 +42,13 @@
                 <li><a href="paginaPrincipal.html">Inicio
                     <ul> 
                         <li><a href="alcoholPrincipal.html">Alcohol</a> </li>
-                        <li><a href="">Alcohol en Gel</a> </li>
+                        <li><a href="alcoholPrincipal.html">Alcohol en Gel</a> </li>
                         <li><a href="">Batas Quirúrgicas</a> </li>
                         <li><a href="">Botas Quirúrgicas</a></li>
                         <li><a href="">Guantes Quirúrgicos</a></li>
                         <li><a href="">Gorros Quirúrgicos</a></li>
                         <li><a href="">Máscaras de Protección</a> </li>
-                        <li><a href="">Macarillas Quirúrgicas</a> </li> <!--Cada uno de las secciones será mostrado dentro del menú desplegable-->
+                        <li><a href="mascarillas.html">Macarillas Quirúrgicas</a> </li> <!--Cada uno de las secciones será mostrado dentro del menú desplegable-->
                         <li><a href="">Trajes de Bioseguridad</a> </li>
                     </ul>
                     
@@ -63,7 +65,7 @@
 
         <!--VIDEO-->
         <section class="general video"> 
-            <video src="../videos/emergenciaCovid.mp4" autoplay loop width="100%" ></video>
+            <video src="../videos/emergenciaCovid.mp4" autoplay controls loop width="100%" ></video>
         </section>
 
         <!--SUBMENU-->
@@ -71,7 +73,7 @@
             <label>Categorías populares</label>
             <section class="contenedorSubmenu">
                 <section class="iconos">
-                    <a href=""><img src="../imagenes/iconoMascarilla.svg" alt="No se puede cargar la imágen" width="200px" height="100px"></a>
+                    <a href="mascarillas.html"><img src="../imagenes/iconoMascarilla.svg" alt="No se puede cargar la imágen" width="200px" height="100px"></a>
                     <p>MASCARILLAS</p>
                 </section>
 
@@ -100,7 +102,7 @@
                 </section>
                 
                 <section class="cuadroOfertas">
-                    <a href=""></a><img src="../imagenes/coronavirus.png" alt="No se puede cargar la imágen" width="100%" ></a>
+                    <a href="combos.html"><img src="../imagenes/coronavirus.png" alt="No se puede cargar la imágen" width="100%" ></a>
                 </section>
             </section>
         </section>
@@ -114,13 +116,7 @@
                     <td><label><a href="">Acerca del Desarrollador</a></label></td>
                 </tr>
                 <tr>
-                    <td><label><a href="">Redes Sociales</a></label></td>
-                </tr>
-                <tr>
                     <td><label><a href="">Acerca de la Página</a></label></td>
-                </tr>
-                <tr>
-                    <td><label><a href="">Sobre la Página</a></label></td>
                 </tr>
                 <tr>
                     <td><label>Emmely Intriago, Manta-Ecuador © Copyright 2020</label></td>
