@@ -83,3 +83,19 @@ ul, ol{
     border-collapse: collapse;
     border: 1px solid #cfcfcf;
 }
+
+.btncompra{
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    background-color: rgb(11, 11, 49);
+    color:white;
+    border-radius: 6px;
+    border: 1px solid white;
+    font-family:  serif;
+}
+
+.btncompra:hover{
+    background-color: rgb(40, 40, 136) 
+}

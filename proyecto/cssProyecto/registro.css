@@ -189,3 +189,7 @@ ul, ol{
 .lista li ul li{
     position: relative;
 }
+
+#mensajeCedula{
+    color: red;
+}

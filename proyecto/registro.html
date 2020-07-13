@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="./cssProyecto/registro.css">
+    <script src="./javaScriptProyecto/registro.js"></script>
 </head>
 <body>
     <section class="contenedor">
@@ -14,8 +15,8 @@
                 <ul class="lista">
                     <li><a href="paginaPrincipal.html">Inicio
                         <ul> 
-                            <li><a href="">Alcohol</a> </li>
-                            <li><a href="">Alcohol en Gel</a> </li>
+                            <li><a href="alcoholPrincipal.html">Alcohol</a> </li>
+                            <li><a href="alcoholPrincipal.html">Alcohol en Gel</a> </li>
                             <li><a href="">Batas Quirúrgicas</a> </li>
                             <li><a href="">Botas Quirúrgicas</a></li>
                             <li><a href="">Guantes Quirúrgicos</a></li>
@@ -28,7 +29,7 @@
                     </li>
                  <!--Las siguientes secciones del menú permiten acceder de forma rápida a otras secciones de nuestra página-->
                     <li><a href="combos.html">Ofertas</a> </li>   
-                    <li><a href="">Servicio al Cliente</a> </li> <!--Se mostrarán productos combinados entre sí, para fayor facilidad de selección-->
+                    <li><a href="servicioCliente.html">Servicio al Cliente</a> </li> <!--Se mostrarán productos combinados entre sí, para fayor facilidad de selección-->
                     <li><a href="registro.html">Registro</a> </li> <!-- mostrará datos de contacto o para presentar alguna queja en caso de ser requerido-->
                     <li><a href="iniciarSesion.html">Iniciar Sesión</a> </li> <!-- muestra el perfil laboral/estudiantil del desarrollador y la finalidad de realizar esta página web-->
                 </ul>
@@ -36,7 +37,7 @@
         </header>
 
         <section class="general registro">
-            <form action="paginaPrincipal.html" method="get">
+            <form action="paginaPrincipal.html" method="get" name="registros" id="rehistros">
                 <table>
                     <tr>
                         <td colspan="3">
@@ -96,15 +97,17 @@
                         <td colspan="2">
                             <input class="formulario" type="password" id="contraseña" placeholder="Ingrese una contraseña" required pattern="[a-zA-Z0-9]{6,15}" title="La contraseña debe incluir números y una 
                             longitud de 8 caracteres">
+                            <div id="mensajeContraseña"></div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="confContraseña" >Confirmar Contraseña</label>
+                            <label for="contraseña2" >Confirmar Contraseña</label>
                         </td>
                         <td colspan="2">
-                            <input class="formulario" type="password" id="confContraseña" placeholder="Confirme la contraseña" required pattern="[a-zA-Z0-9]{6,15}" title="La contraseña debe incluir números y una 
+                            <input class="formulario" type="password" id="contraseña2" placeholder="Confirme la contraseña" required pattern="[a-zA-Z0-9]{6,15}" title="La contraseña debe incluir números y una 
                             longitud de 8 caracteres">
+                            <div id="mensajeContraseña"></div>
                         </td>
                     </tr>
                     <tr>
@@ -128,9 +131,6 @@
              </form>
         </section>
         
-        <section class="general pie">
-
-        </section>
     </section>
 </body>
 </html>

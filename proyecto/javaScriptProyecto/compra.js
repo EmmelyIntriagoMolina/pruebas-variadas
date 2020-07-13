@@ -1,36 +1,32 @@
 window.addEventListener('load', function()
 {
-      btnGenerarReporte.addEventListener('click', function(){
-
-           
+    btnGenerarReporte.addEventListener('click', function()
+    {
             arr=
             [
-                
                 ["Alcohol Weir", "$3,00"],
                 ["Alcohol en Gel Dr Farma","$3,50 c/u",],
                 ["Alcohol en Gel Elite", "$3,50 c/u",],
                 ["Alcohol en Gel Algabo", "$4,50 c/u",],
                 ["Alcohol en Gel Weir", "$4,50 c/u"],
-                
-
-            
             ]
-            
-            convertirArregloEnTabla(arr);
-            
-        
-      });
+            convertirArregloEnTabla(arr)
+    });
 
-      function convertirArregloEnTabla(parreglo)
-      {
+    
+});
+
+function convertirArregloEnTabla(parreglo)
+    {
             
-            let html="<table border=1>"
-            html+="<thead>"
-            html+="<tr>"
-            html+="<th id=producto>Producto</th>"
-            html+="<th id=producto>Total</th>"
-            html+="</tr>"
-            parreglo.forEach(elemento=>
+        let html="<table border=1>"
+        html+="<thead>"
+        html+="<tr>"
+        html+="<th id=producto>Producto</th>"
+        html+="<th id=producto>Total</th>"
+        html+="</tr>"
+
+        parreglo.forEach(elemento=>
             {
                 
                 html+="<tr>"
@@ -58,5 +54,6 @@ window.addEventListener('load', function()
         html+="<button id=btnFinalizar>Finalizar Compra</button>"
         divReporte.innerHTML=html
     
-}
-});
+    }
+
+    btnFinalizar.addEventListener('click', function(){alert("Compra Realizada con Éxito")})

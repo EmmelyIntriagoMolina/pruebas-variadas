@@ -14,10 +14,30 @@ window.addEventListener('load', function(){
         }
     
     })
+
+     /* Validar Contraseña*/
+    
+    contraseña1.addEventListener('blur', function()
+     {
+        mensajeContraseña.innerHTML=""
+
+        if (contraseña.value!=contraseña2.value) 
+        {
+            mensajeContraseña+="Las contraseñas no coinciden <br>"
+            
+        } else 
+        {
+            mensajeContraseña+="Las contraseñas coinciden"
+             
+        }
+    })
+
+   
+    
 })
 
     
-
+/* VALIDAR CEDULA*/
 
 function validarCedula(parametro)
 {   
@@ -33,5 +53,9 @@ function validarCedula(parametro)
     while(calculo>0) calculo-=10;
     return parseInt(parametro.substr(9)) + calculo==0;
 
-     
 }
+
+
+
+    
+
