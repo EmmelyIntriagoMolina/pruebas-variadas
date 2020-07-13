@@ -11,25 +11,37 @@ window.addEventListener('load', function(){
         if (!validarCedula(txtcedula.value))
         {
             mensajeCedula.innerHTML+="No cumple los criterios de validacion del Registro Civil <br>"
+            
         }
     
     })
 
      /* Validar Contraseña*/
     
-    contraseña1.addEventListener('blur', function()
+     contraseña2.addEventListener('blur', function()
      {
-        mensajeContraseña.innerHTML=""
+        
 
-        if (contraseña.value!=contraseña2.value) 
+        mensajeContraseña2.innerHTML=""
+
+        /*Tamaño mínimo */
+        if(contraseña.value.length && contraseña2.value.length<8)
         {
-            mensajeContraseña+="Las contraseñas no coinciden <br>"
-            
-        } else 
-        {
-            mensajeContraseña+="Las contraseñas coinciden"
-             
+            mensajeContraseña2.innerHTML+="La contraseña debe tener al menos 8 caracteres <br>"
+        }else{
+            if (contraseña.value==contraseña2.value) 
+            {
+                mensajeContraseña2.innerHTML+="Las contraseñas coinciden <br>"
+                
+            } else 
+            {
+                mensajeContraseña2.innerHTML+="Las contraseñas no coinciden"
+                
+            }
         }
+   
+        
+        
     })
 
    
