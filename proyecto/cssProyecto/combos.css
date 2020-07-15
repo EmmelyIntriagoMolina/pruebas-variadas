@@ -1,7 +1,7 @@
 *{
     margin: 0px;
     padding:0px;
-
+    
 }
 
 .general
@@ -15,7 +15,7 @@
 {
   
     display: grid;
-    grid-template: 50px 50px 1fr 50px;
+    grid-template: 50px 30px 1fr 50px;
     grid-template-columns: 300px 1fr;
     border: 0px;
     
@@ -86,15 +86,18 @@
     border-spacing: 0px;
    
 }
+
+/*MENÚ */
 #menu{
     grid-area: menu;
+    background-color: rgb(11, 11, 49);
+    text-decoration: none;
+    color:white;
+    font-family:  serif;
+    padding: 5px;
     font-family: serif;
     font-size: 20px;
-    text-align:center;
-    width: 94.8%;
-   
-    padding:1px 30px;/*Anchura del menú */
-    margin:0px;
+    
  }
 
 ul, ol{
@@ -118,7 +121,7 @@ ul, ol{
     padding:12px 50px;
     display:block;
 }
-
+ 
 .lista li a:hover{ /*Color del submenú al pasar el mouse */
     background-color: rgb(40, 40, 136) ;
     
@@ -148,7 +151,7 @@ ul, ol{
     font-size: 15px;
     text-align: left;
     color: white;
-   
+  
 
 }
 
@@ -267,7 +270,29 @@ progress::-webkit-progress-bar {
 }
 
 
+#servicioCliente{
+    font-family: serif;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
 
+#servicioCliente input{
+    width: 300px ;
+    border:skyblue 1px solid;
+    font-size: 15px;
+    height: 25px;
+    margin: 5px;
+}
+
+#servicioCliente textarea{
+    width: 300px ;
+    border:skyblue 1px solid;
+    font-size: 15px;
+    
+    margin: 5px;
+}
+/* PIE DE PÁGINA*/
 .pie{
     grid-area: pie;
     background-color: rgb(11, 11, 49);

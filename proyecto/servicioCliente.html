@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cssProyecto/servicioCliente.css">
+    <link rel="stylesheet" href="cssProyecto/combos.css">
     <title>Servicio al Cliente</title>
 </head>
 <body>
@@ -60,7 +60,7 @@
         </nav>
 
         <!--REDES-->
-        <section class="redes">
+        <section class="ordenar">
             <table>
                 <tr>
                     <td>
@@ -82,13 +82,13 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="../imagenes/logoWsp.png" alt="No se puede cargar"width="50px" height="45px">
+                        <img src="../imagenes/logoWsp.png" alt="No se puede cargar"width="35px" height="35px">
                     </td>
                     <td>0991827349-0982718274</td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="../imagenes/logoGmail.png" alt="No se puede cargar" width="50px" height="45px">
+                        <img src="../imagenes/logoGmail.png" alt="No se puede cargar" width="35px" height="35px">
                     </td>
                     <td>ventamed@gmail.com.org</td>
                 </tr>
@@ -102,7 +102,39 @@
 
         <!--Contenido-->
         <section class="contenido">
-
+            <form action="./servicioCliente.html" method="GET" name="servicioCliente" id="servicioCliente">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="txttitulo">Título:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="txttitulo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtAsunto">Asunto:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtAsunto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtDescripcion">Descripción</label>
+                        </td>
+                        <td>
+                            <textarea name="descripcion" id="txtDescripcion" cols="26" rows="10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="bt1" id="btnEnviar">Enviar</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
 
         </section>
 

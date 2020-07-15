@@ -18,7 +18,7 @@ window.addEventListener('load', function(){
 
      /* Validar Contraseña*/
     
-     contraseña2.addEventListener('blur', function()
+    contraseña2.addEventListener('blur', function()
      {
         
 

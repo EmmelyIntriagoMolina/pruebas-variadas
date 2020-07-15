@@ -20,5 +20,19 @@ window.addEventListener('load', function(){
             window.location="paginPrincipal.html"; 
         } 
     } 
+
+    /*VALIDAR CONTRASEÑA */
+    contraseña.addEventListener('blur', function()
+    {
+        
+
+        mensajeContraseña.innerHTML=""
+
+        /*Tamaño mínimo */
+        if(contraseña.value.length<8)
+        {
+            mensajeContraseña.innerHTML+="La contraseña debe tener al menos 8 caracteres <br>"
+        }
+    })
     
 })
