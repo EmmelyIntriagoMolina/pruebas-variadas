@@ -207,3 +207,37 @@ ul, ol{
     text-align: start;
     border-bottom: 1px solid #cfcfcf;
   }
+#tablaProducto select {
+    font-family: serif;
+    font-size: 15px;
+    width: 72%;
+    border: skyblue 1px solid;
+    height: 40px;
+    
+}
+
+#tablaProducto  option{
+    font-family: serif;
+    font-size: 15px;
+    width: 72%;
+    border: skyblue 1px solid;
+    height: 40px;
+}
+
+#tablaProducto input {
+    font-family: serif;
+    font-size: 15px;
+    width: 72%;
+    border: skyblue 1px solid;
+    height: 40px;
+    
+}
+#celdaCarrito{
+    width: 9%;
+}
+#celdaImagen {
+    margin-right: 50px;
+    text-align: left;
+    width: 20%;
+  
+}

@@ -1,6 +1,6 @@
 window.addEventListener('load', function(){
 
-    
+    //VALIDAR CÉDULA
     txtcedula.addEventListener('blur', function()
     {
         mensajeCedula.innerHTML=""
@@ -16,41 +16,59 @@ window.addEventListener('load', function(){
     
     })
 
-     /* Validar Contraseña*/
-    
-    contraseña2.addEventListener('blur', function()
-     {
-        
+    //VALIDAR NOMBRE
+    txtnombre.addEventListener('blur',function(){
+        mensajeNombre.innerHTML=""
+        if(!validarNumeros(txtnombre.value)){
+            mensajeNombre.innerHTML+="El campo no puede contener números <br>"
+        }
 
-        mensajeContraseña2.innerHTML=""
+    })
+
+
+    /* VALIDAR CONTRASEÑA*/
+    contraseña.addEventListener('blur',function()
+    {
+        mensajeContraseña.innerHTML=""
 
         /*Tamaño mínimo */
-        if(contraseña.value.length && contraseña2.value.length<8)
-        {
-            mensajeContraseña2.innerHTML+="La contraseña debe tener al menos 8 caracteres <br>"
-        }else{
-            if (contraseña.value==contraseña2.value) 
-            {
-                mensajeContraseña2.innerHTML+="Las contraseñas coinciden <br>"
-                
-            } else 
-            {
-                mensajeContraseña2.innerHTML+="Las contraseñas no coinciden"
-                
-            }
+        if(contraseña.value.length<8){
+            mensajeContraseña.innerHTML+="La contraseña debe tener al menos 8 dígitos<br>"
         }
-   
+        //Validar que tenga minúsculas y mayúsculas
         
+        if(!validarMinusculas(contraseña.value)){
+            mensajeContraseña.innerHTML+="La contraseña debe contener minúsculas, mayúsculas y números<br>"
+        }
+        if (!validarMayusculas(contraseña.value))
+        {
+            mensajeContraseña.innerHTML+="La contraseña debe contener mayúsculas, minúsculas y números <br>"
+        }
         
     })
 
-   
+    contraseña2.addEventListener('blur', function()
+    {
+        mensajeContraseña2.innerHTML=""
+        mensajeCorrecto.innerHTML=""
+
+        //Validar que las contraseñas sean iguales
+        if (contraseña.value==contraseña2.value) 
+        {
+            mensajeCorrecto.innerHTML+="¡Las contraseñas coinciden! <br>"
+                
+        } else 
+        {
+            mensajeContraseña2.innerHTML+="Las contraseñas no coinciden <br>"
+                
+        }
+    })
+  
     
 })
 
     
-/* VALIDAR CEDULA*/
-
+//FUNCIÓN VALIDAR CÉDULA
 function validarCedula(parametro)
 {   
     if(parametro.length!=10) return false;
@@ -67,7 +85,52 @@ function validarCedula(parametro)
 
 }
 
+//Validar Minúsculas
+function validarMinusculas(parametro)
+    {
+        let letrasMin="abcdefghyjklmnñopqrstuvwxyz";
+            
+        for(let i=0; i<parametro.length; i++)
+        {
+            if (letrasMin.indexOf(parametro.charAt(i),0)!=-1)
+            {
+                return 1
+            }
+            else {
+                return 0
+            }
+        }
+    }
 
+//Validar Mayusculas
+function validarMayusculas(parametro)
+    {
+        let letrasMayus="ABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
+        for(let i=0; i<parametro.length; i++)
+        {
+            if (letrasMayus.indexOf(parametro.charAt(i),0)!=-1)
+            {
+                return 1
+            }else{
+                return 0
+            }
+        }
+    }
+
+//VALIDAR QUE EL NOMBRE NO TENGA NUMEROS
+    function validarNumeros(parametro)
+    {
+        let numeros="0123456789"
+        for(let i=0; i<parametro.length; i++)
+        {
+            if (numeros.indexOf(parametro.charAt(i),0)==-1)
+            {
+                return 1
+            }else{
+                return 0
+            }
+        }
+    }
 
     
 

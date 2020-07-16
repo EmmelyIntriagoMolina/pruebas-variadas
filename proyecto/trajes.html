@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cssProyecto/combos.css">
+    <script src="../proyecto/javaScriptProyecto/combos.js"></script>
+    <title>Trajes de Bioseguridad</title>
+</head>
+<body>
+    <section class="contenedor">
+        <!--CEBECERA-->
+        <header class="general cabecera">
+            <form action="busqueda.html" method="">	
+                
+                <table>
+                    <tr>
+                        <td id="celdaImagen">
+                            <img src="../imagenes/logo4.PNG" alt="">
+                        </td>
+                        
+                        <td colspan="3">
+                            <input type="search" placeholder="Buscar..." width="15%">	
+                        </td>
+                        <td >
+                            <button>Buscar</button>
+                        </td>
+                        <td id="celdaCarrito">
+                            <a href="compra.html"><img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" ></a> <br>
+                            <a href="compra.html">Mis Compras</a>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </form>
+        </header>
+    
+        <!--MENU-->
+        <nav class="general menu" id="menu">
+            <ul class="lista">
+                <li><a href="paginaPrincipal.html">Inicio
+                    <ul> 
+                        <li><a href="alcoholPrincipal.html">Alcohol</a> </li>
+                        <li><a href="alcoholPrincipal.html">Alcohol en Gel</a> </li>
+                        <li><a href="BATAS.HTML">Batas Quirúrgicas</a> </li>
+                        <li><a href="botas.html">Botas Quirúrgicas</a></li>
+                        <li><a href="guantes.html">Guantes Quirúrgicos</a></li>
+                        <li><a href="gorro.html">Gorros Quirúrgicos</a></li>
+                        <li><a href="mascaras.html">Máscaras de Protección</a> </li>
+                        <li><a href="mascarillas.html">Macarillas Quirúrgicas</a> </li> <!--Cada uno de las secciones será mostrado dentro del menú desplegable-->
+                        <li><a href="trajes.html">Trajes de Bioseguridad</a> </li>
+                    </ul>
+                    
+                </li>
+            <!--Las siguientes secciones del menú permiten acceder de forma rápida a otras secciones de nuestra página-->
+                <li><a href="combos.html">Ofertas</a> </li> <!--Se mostrarán productos combinados entre sí, para fayor facilidad de selección-->
+                <li><a href="servicioCliente.html">Servicio al Cliente</a> </li> <!-- mostrará datos de contacto o para presentar alguna queja en caso de ser requerido-->
+                <li><a href="registro.html">Registro</a> </li> <!-- muestra el perfil laboral/estudiantil del desarrollador y la finalidad de realizar esta página web-->
+                <li><a href="iniciarSesion.html">Iniciar Sesión</a> </li> <!--Esta sección será la más dinámica, ya que se realizarán cambios constantemente para ofrecer mejores precios a los clientes-->
+            </ul>
+        </nav>
+     <!--ORDENAR POR-->
+        <section class="general ordenar">
+            <table>
+                <tr>
+                    <td><label id="texto1"> Ordenar por:</label></td>
+                </tr>
+                <tr>
+                    <td><label>Precio</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio1" value="mayor" name="precio"> Mayor a Menor</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada--></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio2" value="menor" name="precio"> Menor a Mayor</label></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><label>Nombre</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio3" value="az" name="nombre"> De la A a la Z</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada--></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio4" value="za" name="nombre"> De la Z a la A</label></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><label>Color</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio5" value="celeste" name="color"> Celeste</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada--></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio6" value="blanco" name="color"> Blanco</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio7" value="azul" name="color"> Azul</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada--></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio8" value="negro" name="color"> Negro</label></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><label>Tamaño</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio9" value="grande" name="tamaño"> Grande</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada--></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio10" value="pequeño" name="tamaño"> Mediano</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" id="radio11" value="mediano" name="tamaño"> Pequeño</label><!--Al pertenecer al mismo grupo de opciones solo una opción puede ser seleccionada--></td>
+                </tr>
+                
+            </table>
+        </section>
+
+
+        <!--CONENIDO-->
+        <!--CONENIDO-->
+        <section class="general contenido">
+            <section class="sub seccion1">
+                <table class="comprar"> <!--Creamos una tabla en donde se ubicará una iamgen y los datos de cada producto-->
+                    <tr>
+                        <td colspan="2"><img src="https://cheaper.com.ec/1053-thickbox_default/trajes-de-bioseguridad.jpg" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td> <!--Añadimos la imagen del producto-->
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Traje de Bioseguridad</label><!--nombre del producto-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href=""><img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" ></a>
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1"><!--barra para que el cliente pueda ir añadiendo más productos-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="50"></progress> <!--barra de progreso para indicar la existencia de cada producto-->
+                            
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$11,00 c/u</label><!--preop del producto-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button name="compra" value="comprar" class="bt1" id="btn1">  AÑADIR</button> <!--bontón de compra-->
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="sub seccion2">
+                <table class="comprar"> <!--Creamos una tabla en donde se ubicará una iamgen y los datos de cada producto-->
+                    <tr>
+                        <td colspan="2"><img src="https://www.boho.com.ec/wp-content/uploads/2020/05/electrico-2.jpg" alt="No se ha podido cargar la imagen" height="150px" width="140px"></td> <!--Añadimos la imagen del producto-->
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Traje de Bioseguridad Nylon</label><!--nombre del producto-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href=""><img src="../imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" ></a>
+                        </td>
+                        <td>
+                            <input type="number" id="barra1" name="numeros" step="1" max="100" min="1"><!--barra para que el cliente pueda ir añadiendo más productos-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Exis. </span>
+                            <progress id="seccion1" max="100" value="86"></progress> <!--barra de progreso para indicar la existencia de cada producto-->
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td colspan="2">
+                            <label>$30,00 c/u</label><!--preop del producto-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button name="compra" value="comprar" class="bt1" id="btn2">  AÑADIR</button><!--bontón de compra-->
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+
+         <!--PIE DE PAGINA-->
+         <footer class="general pie">
+                
+            <table>
+                <tr>
+                    <td><label><a href="">Acerca del Desarrollador</a></label></td>
+                </tr>
+                <tr>
+                    <td><label><a href="">Acerca de la Página</a></label></td>
+                </tr>
+                <tr>
+                    <td><label>Emmely Intriago, Manta-Ecuador © Copyright 2020</label></td>
+                </tr>
+            </table>
+            
+        </footer>
+    </section>
+</body>
+</html>

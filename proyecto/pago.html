@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cssProyecto/pago.css">
+    <title>Factura</title>
+</head>
+<body>
+    <table id="tablaFactura">
+        <thead>
+            <tr>
+                <td><h3>FACTURA 001</h3></td>
+                <td colspan="2"><img src="../imagenes/logo4.PNG" alt="No se puede cargar la imágen"></td>
+            </tr>
+            <tr>
+                <td>Cliente:</td><td colspan="2"><input type="text" id="facturaCliente" placeholder="Ingrese nombre"></td>
+            </tr>
+            <tr>
+                <td>Dirección:</td><td colspan="2"><input type="text" id="facturaDireccion" placeholder="Ingrese dirección"></td>
+            </tr>
+            <tr>
+                <td>Teléfono:</td><td colspan="2"><input type="text" id="facturaTelefono" placeholder="Ingrese teléfono"></td>
+            </tr>
+            <tr>
+                <td>#</td><td>Producto</td><td>Precio</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2</td><td>Alcohol Weir</td><td> $3,00</td>
+            </tr>
+            <tr>
+                <td>1</td><td>Alcohol en Gel Dr Farma</td><td> $3,50</td>
+            </tr>
+            <tr>
+                <td>1</td><td>Alcohol en Gel Algabo</td><td>$4,50</td>
+            </tr>
+            <tr>
+                <td>1</td><td>Alcohol en Gel Weir</td><td>$4,50</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Subtotal</td>
+                <td>$19,00</td>
+            </tr>
+            <tr>
+                <td colspan="2">Envío</td>
+                <td>$2,00</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>$21,00</td>
+            </tr>
+            <tr>
+            
+        </tfoot>
+    </table>
+    <input type="button" name="imprimir" value="Imprimir" id="imprimirFactura" onclick="window.print();">
+</body>
+</html>

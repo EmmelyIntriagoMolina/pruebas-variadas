@@ -193,6 +193,16 @@ ul, ol{
 #mensajeCedula{
     color: red;
 }
+#mensajeContraseña{
+    color: red;
+}
 #mensajeContraseña2{
+    color: red;
+}
+#mensajeCorrecto{
+    color: green;
+}
+
+#mensajeNombre{
     color: red;
 }

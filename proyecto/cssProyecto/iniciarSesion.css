@@ -78,3 +78,11 @@ background: rgb(40, 40, 136) ;
 #mensajeContraseña{
     color: red;
 }
+
+#mensajeNombre{
+    color: red;
+}
+
+#mensajeContraseña2{
+    color: green
+}

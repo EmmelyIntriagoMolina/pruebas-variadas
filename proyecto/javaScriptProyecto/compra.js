@@ -19,7 +19,7 @@ window.addEventListener('load', function()
 function convertirArregloEnTabla(parreglo)
     {
             
-        let html="<table border=1>"
+        let html="<table border=1 id=tablaProducto>"
         html+="<thead>"
         html+="<tr>"
         html+="<th id=producto>Producto</th>"
@@ -49,11 +49,24 @@ function convertirArregloEnTabla(parreglo)
             html+="<th>Total</th>"
             html+="<td>$21,00</td>"
         html+="</tr>"
+        html+="<tr>"
+            html+="<th>Forma de Pago</th>"
+            html+="<td><select class=formaPago name=pago id=pago> <option value=visa>VISA</option><option value=mastercard>MasterCard</option><option value=american>American Express</option> </select></td>"
+        html+="</tr>"
+        html+="<tr>"
+            html+="<th>Número de Tarjeta</th>"
+            html+="<td><input type=text required></td>"
+        html+="</tr>"
         html+="</table>";
         
-        html+="<button id=btnFinalizar>Finalizar Compra</button>"
+        html+="<a href=pago.html><button id=btnFinalizar>Confirmar Compra </button></a>"
+        
         divReporte.innerHTML=html
-    
-    }
+        
 
-    btnFinalizar.addEventListener('click', function(){alert("Compra Realizada con Éxito")})
+        
+        
+    }
+    
+
+    
