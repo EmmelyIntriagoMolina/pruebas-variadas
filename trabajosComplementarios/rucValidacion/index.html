@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación RUC</title>
     <script src="./js/libreria.js"></script>
-    <title>Validacion RUC</title>
 </head>
 <body>
-    <label for="txtRuc">Ingrese su RUC</label>
-    <input type="text" id="txtRuc">
-    <div id="divMensaje"></div>
+    <label for="txtruc">Ingrese el RUC</label>
+    <input type = "text" name = "dato" id = "ruc" maxlength = 13>
+    <input type = "button" value = "Validar RUC" onclick = "validarRuc()">
+    <div id="mensajeRuc"></div>
+  
 </body>
 </html>

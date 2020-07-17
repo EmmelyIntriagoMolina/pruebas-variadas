@@ -1,46 +1,52 @@
-window.addEventListener('load',function(){
+window.addEventListener('load', function(){
 
-    txtRuc.addEventListener('blur',function(){
-
-        divMensaje.innerHTML=""
-        if(txtRuc.value.length!=13)
-        {
-            divMensaje.innerHTML="El RUC debe contener 13 dígitos <br>"
-        }
-        if (!validarRUC(txtRuc.value))
-        {
-            divMensaje.innerHTML+="No cumple los criterios de validacion del SRI <br>"
-        }
-        if (txtRuc.value.substr(10,13)!=001){
-            divMensaje.innerHTML+="Los últimos 3 dígitos no pertenecen al RUC"
-        }
-        let indicador=txtRuc.value.substr(2,3)
-        if(indicador<6){
-            divMensaje.innerHTML+="El RUC corresponde a una persona Natural"
-        }
-        if(indicador==6){
-            divMensaje.innerHTML+="El RUC corresponde a una sociedad privada"
-        }
-    
-        if(indicador==9){
-            divMensaje.innerHTML+="El RUC corresponde a una sociedad pública"
-        }
+    let body = document.getElementById("body");
+    body.addEventListener('blur',function validarRuc(){
+ 
     })
-})
-
-function validarRUC(parametro)
-{   
-    if(parametro.length!=13) return false;
-    let semaforo=false;
-    calculo=0;
-    parametro.substr(0,9).split('').forEach(element => { //dividir los numeros, ponerlos como un arreglo y recorrerlos
-        let numeroActual =semaforo ? parseInt(element): parseInt(element)*2;
-        calculo+=numeroActual>9 ? numeroActual-9: numeroActual;
-        semaforo=!semaforo;
-    
-    })
-        
-    while(calculo>0) calculo-=10;
-    return parseInt(parametro.substr(9)) + calculo==0;
-     
+ })
+ 
+ 
+function validarRuc()
+{
+    let number = document.getElementById('ruc').value;
+    let dato = number.length;
+    let contenedor=0;
+    if(number=="")
+    {
+        mensajeRuc.innerHTML+="No has ingresado ningún dato, porfavor ingresar los datos correspondientes.";
+    }
+    else
+    {
+        for (let i=0; i<dato; i++)
+        {
+            let valor = number.substring(i,i+1);
+            if(valor==0||valor==1||valor==2||valor==3||valor==4||valor==5||valor==6||valor==7||valor==8||valor==9)
+            {
+            contenedor = contenedor+1;
+            }
+        }
+        if(contenedor==dato)
+        {
+            while(number.substring(10,13)!=001)
+            {
+                mensajeRuc.innerHTML +="El numero de digitos debe ser 13, \n y Los tres últimos dígitos deben tener el código del RUC 001.";
+                return;
+            }
+            mensajeRuc.innerHTML += "El RUC está escrito correctamente";
+            let digito = number.substring(2,3);
+            if(digito<6)
+            {
+                mensajeRuc.innerHTML += " Pertenece a una persona natural";
+            }
+            if(digito==6)
+            {
+                mensajeRuc.innerHTML += "El tercer dígito es igual a 6, por lo tanto el usuario es una entidad pública";
+            }
+            if(digito==9)
+            {
+            mensajeRuc.innerHTML +="El tercer dígito es igual a 9, por lo tanto el usuario es una sociedad privada";
+            }
+        }
+    }
 }
