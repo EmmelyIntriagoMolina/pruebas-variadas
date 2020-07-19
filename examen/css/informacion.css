@@ -54,3 +54,21 @@ ul, li{
 .lista li ul li{
     position: relative;
 }
+ /*INFORMACIÓN DEL PROBLEMA*/
+.informacion h3{
+    margin-top:15px;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.informacion ul{
+    margin-left: 10px;
+}
+
+.informacion li{
+    font-family: serif;
+    font-size: 20px;
+    text-align: center;
+}
