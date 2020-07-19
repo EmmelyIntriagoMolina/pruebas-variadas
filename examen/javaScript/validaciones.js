@@ -44,47 +44,28 @@ window.addEventListener('load',function()
     })
 
     
-    //GENERAR LONGITUD
-    btnLongitud.addEventListener('click', function()
-    {
-        navigator.geolocation.getCurrentPosition(traerLongitud)
-        
-    })
-    function traerLongitud(parametro)
-    {
-        mensajeLongitud.innerHTML+=parametro.coords.longitude;
-    }
+    
 
-    //VALIDAR EL INGRESO DE NÚMERO DE LONGITUD
+    //VALIDAR LONGITUD
     txtLongitud.addEventListener('blur',function()
     {
         mensajeLongitud2.innerHTML=""
         if(validarNumerosSi(txtLongitud.value))
         {
-            mensajeLongitud2.innerHTML+="Solo puede ingresar números";
+            mensajeLongitud2.innerHTML+="Ingrese números y decimales separados con .";
         }
         if(txtLongitud.value<-180 || txtLongitud.value >180){
             mensajeLongitud2.innerHTML+="La Longitud ingresada no es correcta";
         }
     })
 
-    //GENERAR LATITUD
-    btnLatitud.addEventListener('click', function(){
-        navigator.geolocation.getCurrentPosition(traerLatitud)
-        mensajeLatitud.innerHTML=""
-    })
-    function traerLatitud(parametro)
-    {
-        mensajeLatitud.innerHTML+=parametro.coords.latitude;
-    }
-
-    //VALIDAR EL INGRESO DE NÚMERO DE LATITUD
+    //VALIDAR  LATITUD
     txtLatitud.addEventListener('blur',function()
     {
         mensajeLatitud2.innerHTML=""
         if(validarNumerosSi(txtLatitud.value))
         {
-            mensajeLatitud2.innerHTML+="Solo puede ingresar números";
+            mensajeLatitud2.innerHTML+="Ingrese números y decimales separados con punto";
         }
         if(txtLatitud.value<-90 || txtLatitud.value>90){
             mensajeLatitud2.innerHTML+="La Latitud ingresada no es correcta";
@@ -119,7 +100,7 @@ window.addEventListener('load',function()
     })
 })
 
-//FUNCIÓN VALIDAR QUE EL NOMBRE NO TENGA NUMEROS
+//FUNCIÓN VALIDAR QUE UNA CADENA STRING NO TENGA NUMEROS
 function validarNumeros(parametro)
 {
     let numeros="0123456789"
@@ -134,10 +115,10 @@ function validarNumeros(parametro)
     }
 }
 
-//FUNCION VALIDAR QUE UN CAMPO SOLO ACEPTE NÚMEROS
+//FUNCION VALIDAR QUE UN CAMPO NO TENGA LETRAS
 function validarNumerosSi(parametro){
 
-    let letras="abcdefghyjklmnñopqrstuvwxyzAABCDFEFGHJIKLÑOPQRSTUVWXYZ";
+    let letras="abcdefghyjklmnñopqrstuvwxyzAABCDFEFGHJIKLÑOPQRSTUVWXYZ,";
 
     parametro = parametro.toLowerCase();
     for(i=0; i<parametro.length; i++){
