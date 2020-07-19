@@ -14,7 +14,7 @@ function validarRuc()
     let contenedor=0;
     if(number=="")
     {
-        mensajeRuc.innerHTML+="No has ingresado ningún dato, porfavor ingresar los datos correspondientes.";
+        mensajeRuc.innerHTML+="No has ingresado ningún dato, porfavor ingresar los datos correspondientes.<br>";
     }
     else
     {
@@ -31,25 +31,25 @@ function validarRuc()
             while(number.substring(10,13)!=001)
             {
                 mensajeRuc.innerHTML += ""
-                mensajeRuc.innerHTML +="El numero de digitos debe ser 13, \n y Los tres últimos dígitos deben tener el código del RUC 001.";
+                mensajeRuc.innerHTML +="El numero de digitos debe ser 13, \n y Los tres últimos dígitos deben tener el código del RUC 001.<br>";
                 return;
             }
-            mensajeRuc.innerHTML += "El RUC está escrito correctamente";
+            mensajeRuc.innerHTML += "El RUC está escrito correctamente.<br>";
             let digito = number.substring(2,3);
             if(digito<6)
             {
                 mensajeRuc.innerHTML += ""
-                mensajeRuc.innerHTML += " Pertenece a una persona natural";
+                mensajeRuc.innerHTML += " Pertenece a una persona natural.<br>";
             }
             if(digito==6)
             {
                 mensajeRuc.innerHTML += ""
-                mensajeRuc.innerHTML += "El tercer dígito es igual a 6, por lo tanto el usuario es una entidad pública";
+                mensajeRuc.innerHTML += "El tercer dígito es igual a 6, por lo tanto el usuario es una entidad pública.<br>";
             }
             if(digito==9)
             {
                 mensajeRuc.innerHTML += ""
-            mensajeRuc.innerHTML +="El tercer dígito es igual a 9, por lo tanto el usuario es una sociedad privada";
+            mensajeRuc.innerHTML +="El tercer dígito es igual a 9, por lo tanto el usuario es una sociedad privada.<br>";
             }
         }
     }

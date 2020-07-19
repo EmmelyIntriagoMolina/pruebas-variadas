@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./javaScript/generacionDOM.js"></script>
+    <title>Inicio</title>
+</head>
+<body>
+    <section class="contenedor">
+
+        <!--MENÚ-->
+        <nav class="general " id="menu"> <!--Las siguientes secciones del menú permiten acceder de forma rápida a otras secciones de nuestra página-->
+            <ul class="lista">
+                <li><a href="index.html">Solución del problema</a></li>
+                
+                <li><a href="registro.html">Registro</a> </li>
+                <li><a href="informacionProblema.html">Información del Problema</a> </li>
+                <li><a>Acerca De</a> 
+                    <ul>
+                        <li><a href="">La Página</a></li>
+                        <li><a href="">El Desarrollador</a></li>
+                    </ul>
+                </li> 
+            </ul>
+        </nav>
+
+        <!--SOLUCIÓN DEL PROBLEMA-->
+        <section class="tabla1">
+            <label for="txtFilas">N. Filas</label>
+            <input type="text" id="txtFilas">
+            <label for="txtcolumnas">N. Columnas</label>
+            <input type="text" id="txtColumnas">
+            <div id="mensajeTabla"></div>
+            <button id="btnGenerar1">Llenar Tabla</button>
+            <div id="mostrarTabla1"></div>
+
+        </section>
+        <section class="tabla2">
+            <button id="btnGenerar2">Girar 45%</button>
+            <div id="mostrarTabla2"></div>
+        </section>
+    </section>
+</body>
+</html>

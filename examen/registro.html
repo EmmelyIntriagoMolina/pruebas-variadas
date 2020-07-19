@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/registro.css">
+    <script src="./javaScript/validaciones.js"></script>
+    
+    <title>Registro</title>
+</head>
+<body>
+    <section class="contenedor">
+        <!--MENÚ-->
+        <nav class="general " id="menu"> <!--Las siguientes secciones del menú permiten acceder de forma rápida a otras secciones de nuestra página-->
+            <ul class="lista">
+                <li><a href="index.html">Solución del problema</a></li>
+                
+                <li><a href="">Registro</a> </li> <!-- muestra el perfil laboral/estudiantil del desarrollador y la finalidad de realizar esta página web-->
+                <li><a href="">Información del Problema</a> </li> <!--Esta sección será la más dinámica, ya que se realizarán cambios constantemente para ofrecer mejores precios a los clientes-->
+                <li><a href="">Acerca De</a> 
+                    <ul>
+                        <li><a href="">La Página</a></li>
+                        <li><a href="">El Desarrollador</a></li>
+                    </ul>
+                </li> 
+            </ul>
+        </nav>
+
+        <!--FORMULARIO DE REGISTRO-->
+
+        <section class="registro">
+            <form action="index.html" method="get" name="registros" id="registros">
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <h4>Formulario Registro</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtnombre">Nombre</label>
+                        </td>
+                        <td colspan="2">
+                            <input class="formulario" type="text" id="txtnombre" placeholder="Ingrese su nombre"  required >
+                            <div id="mensajeNombre"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ruc">RUC</label>
+                        </td>
+                        <td>
+                            <input class="formulario" type="text" id="ruc" placeholder="Ingrese su RUC" required>
+                            <div id="mensajeRuc"></div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <label for="txtubicacion">Longitud</label>
+                        </td>
+                        <td>
+                            <input class="formulario" type="text" id="txtLongitud" required placeholder="Genere y copie la longitud de su ubicación">
+                            <div id="mensajeLongitud"></div>
+                            <div id="mensajeLongitud2"></div>
+                        </td>
+                        <td>
+                            <button class="btnFormulario" id="btnLongitud">Generar</button>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtubicacion">Latitud</label>
+                        </td>
+                        <td>
+                            <input class="formulario" type="text" id="txtLatitud" required placeholder="Genere y copie la latitud de su ubicación">
+                            <div id="mensajeLatitud"></div>
+                            <div id="mensajeLatitud2"></div>
+                        </td>
+                        <td>
+                            <button class="btnFormulario" id="btnLatitud">Generar</button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <label for="nFilas">N. de Filas</label>
+                            
+                        </td>
+                        <td colspan="2">
+                            <input class="formulario" type="hidden" id="nFilas" placeholder="Ingrese número de filas" required>
+                            <div id="mensajeFilas"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nColumnas">N. de Comlumnas</label>
+                            
+                        </td>
+                        <td colspan="2">
+                            <input class="formulario" type="hidden" id="nColumnas" placeholder="Ingrese número de Columnas" required>
+                            <div id="mensajeColumnas"></div>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td colspan="3">
+                            <button  class="boton" id="btnRegistrarse">Registrarse</button>
+                        </td>
+                    </tr>
+                </table>
+                
+             </form>
+        </section>
+    </section>
+</body>
+</html>
