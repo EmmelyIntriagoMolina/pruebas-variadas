@@ -1,0 +1,37 @@
+[
+    {"Identificacion":"1324567893","Nombre":"Emmely","Direccion":"Cdla. Elegolé",
+        "Contacto":{"NombreC":"Marena","Relacion":"Hermana"},
+        "Conexiones":
+        [
+            {"Direcion1":"Cdla Elegolé","Tipo":"Casa"},
+            {"Direcion2":"Los Esteros","Tipo":"Trabajo"}
+        ]
+    },
+
+    {"Identificacion":"1317910087","Nombre":"Lucía","Direccion":"El Palmar",
+        "Contacto":{"NombreC":"Lorena","Relacion":"Mamá"},
+        "Conexiones":
+        [
+            {"Direcion1":"El Palmar","Tipo":"Casa"},
+            {"Direcion2":"Calle 13","Tipo":"Trabajo"}
+        ]
+    },
+
+    {"Identificacion":"1314256783","Nombre":"Pedro","Direccion":"Tarqui",
+        "Contacto":{"NombreC":"Patricia","Relacion":"Novia"},
+        "Conexiones":
+        [
+            {"Direcion1":"Tarqui","Tipo":"Casa"},
+            {"Direcion1":"Tarqui","Tipo":"Familiar"}
+        ]
+    },
+
+    {"Identificacion":"1343567290","Nombre":"Fernanda","Direccion":"La Aurora",
+        "Contacto":{"NombreC":"Pedro","Relacion":"Hermano"},
+        "Conexiones":
+        [
+            {"Direcion1":"La Aurora","Tipo":"Casa"}
+        ]
+    }
+
+]
