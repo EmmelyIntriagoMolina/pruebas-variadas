@@ -21,8 +21,7 @@
         "Contacto":{"NombreC":"Patricia","Relacion":"Novia"},
         "Conexiones":
         [
-            {"Direcion1":"Tarqui","Tipo":"Casa"},
-            {"Direcion1":"Tarqui","Tipo":"Familiar"}
+            {"Direcion1":"Tarqui","Tipo":"Casa"}
         ]
     },
 
