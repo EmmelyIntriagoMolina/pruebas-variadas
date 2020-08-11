@@ -39,6 +39,7 @@
                     idProducto: idProducto.value,
                     descripcion: descripcion.value,
                     existencia: existencia.value,
+                    precio: precio.value,
                     proveedor: proveedor.value
                     })
                 });
@@ -100,6 +101,7 @@
 
 </head>
 <body>
+    
     <label for="txtidProducto">Id</label>
     <input type="text" value="" id="txtidProducto">
 
@@ -110,13 +112,14 @@
     <input type="text" value="" id="txtexistencia">
     
     <label for="precio">Precio</label>
-    <input type="number" value="" id="precio">
+    <input type="text" value="" id="precio">
 
     <label for="txtproveedor">Proveedor</label>
     <input type="text" value="" id="txtproveedor"><br>
 
     <button id="btnguardar">Guardar</button><br>
     <button id="btnconsultar">Consultar</button><br>
+    <button id="btnnuevo">Nuevo</button>
     <div id="listado"></div>
 
 </body>

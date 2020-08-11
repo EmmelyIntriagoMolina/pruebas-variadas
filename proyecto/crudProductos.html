@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./javaScriptProyecto/compra.js"></script>
+    <title>Productos</title>
+</head>
+<body>
+    <section class="contenedor">
+        <!--CABECERA-->
+        <header class="general cabecera">
+            <form action="busqueda.html" method="">	
+                
+                <table>
+                    <tr>
+                        <td id="celdaImagen">
+                            <img src="./imagenes/logo4.PNG" alt="">
+                        </td>
+                        
+                        <td colspan="3">
+                            <input type="search" placeholder="Buscar..." width="15%">	
+                        </td>
+                        <td >
+                            <button>Buscar</button>
+                        </td>
+                        <td id="celdaCarrito">
+                            <a href="compra.html"><img src="./imagenes/carritoCompras.png" alt="No se puede cargar la imágen" height="30"  width="30" ></a> <br>
+                            <a href="compra.html">Mis Compras</a>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </form>
+        </header>
+        
+        <!--MENÚ-->
+        <nav class="general " id="menu">
+            <ul class="lista">
+                <li><a href="index.html">Inicio
+                    <ul> 
+                        <li><a href="alcoholPrincipal.html">Alcohol</a> </li>
+                        <li><a href="alcoholPrincipal.html">Alcohol en Gel</a> </li>
+                        <li><a href="BATAS.HTML">Batas Quirúrgicas</a> </li>
+                        <li><a href="botas.html">Botas Quirúrgicas</a></li>
+                        <li><a href="guantes.html">Guantes Quirúrgicos</a></li>
+                        <li><a href="gorro.html">Gorros Quirúrgicos</a></li>
+                        <li><a href="mascaras.html">Máscaras de Protección</a> </li>
+                        <li><a href="mascarillas.html">Macarillas Quirúrgicas</a> </li> <!--Cada uno de las secciones será mostrado dentro del menú desplegable-->
+                        <li><a href="trajes.html">Trajes de Bioseguridad</a> </li>
+                    </ul>
+                    
+                </li>
+             <!--Las siguientes secciones del menú permiten acceder de forma rápida a otras secciones de nuestra página-->
+                <li><a href="combos.html">Ofertas</a> </li> <!--Se mostrarán productos combinados entre sí, para fayor facilidad de selección-->
+                <li><a href="servicioCliente.html">Servicio al Cliente</a> </li> <!-- mostrará datos de contacto o para presentar alguna queja en caso de ser requerido-->
+                <li><a href="registro.html">Registro</a> </li> <!-- muestra el perfil laboral/estudiantil del desarrollador y la finalidad de realizar esta página web-->
+                <li><a href="iniciarSesion.html">Iniciar Sesión</a> </li> <!--Esta sección será la más dinámica, ya que se realizarán cambios constantemente para ofrecer mejores precios a los clientes-->
+                
+                
+            </ul>
+        </nav>
+
+        <section class="crudProductos">
+            <label for="txtidProducto">Id</label>
+        <input type="text" value="" id="txtidProducto">
+
+        <label for="txtdescripcion">Descripcion</label>
+        <input type="text" value="" id="txtdescripcion">
+
+        <label for="txtexistencia">Existencia</label>
+        <input type="text" value="" id="txtexistencia">
+        
+        <label for="precio">Precio</label>
+        <input type="number" value="" id="precio">
+
+        <label for="txtproveedor">Proveedor</label>
+        <input type="text" value="" id="txtproveedor"><br>
+
+        <button id="btnguardar">Guardar</button><br>
+        <button id="btnconsultar">Consultar</button><br>
+        <div id="listado"></div>
+
+        </section>
+
+        
+        
+   </section>
+    
+</body>
+</html>
