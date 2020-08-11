@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./javaScriptProyecto/compra.js"></script>
+    <link rel="stylesheet" href="./cssProyecto/crudProductos.css">
     <title>Productos</title>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="./javaScriptProyecto/crudProductos.js"></script>
+    
+    
+    
+
 </head>
 <body>
     <section class="contenedor">
@@ -62,30 +71,37 @@
         </nav>
 
         <section class="crudProductos">
-            <label for="txtidProducto">Id</label>
-        <input type="text" value="" id="txtidProducto">
+            <table>
+                <tr>
+                    <td><label for="txtidProducto">Id</label></td>
+                    <td><input type="text" value="" id="txtidProducto"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtdescripcion">Descripcion</label></td>
+                    <td><input type="text" value="" id="txtdescripcion"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtexistencia">Existencia</label></td>
+                    <td><input type="text" value="" id="txtexistencia"></td>
+                </tr>
+                <tr>
+                    <td><label for="precio">Precio</label></td>
+                    <td><input type="text" value="" id="precio"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtproveedor">Proveedor</label></td>
+                    <td><input type="text" value="" id="txtproveedor"><br> </td>
+                </tr>
+                <td>
+                    <td><button id="btnguardar">Guardar</button></td>
+                    <td><button id="btnconsultar">Consultar</button></td>
+                </td>
+            </table>
+            <!--MOSTRAR RESULTADOS DE CONSULTAS-->
+            <div id="listado"></div>
 
-        <label for="txtdescripcion">Descripcion</label>
-        <input type="text" value="" id="txtdescripcion">
-
-        <label for="txtexistencia">Existencia</label>
-        <input type="text" value="" id="txtexistencia">
-        
-        <label for="precio">Precio</label>
-        <input type="number" value="" id="precio">
-
-        <label for="txtproveedor">Proveedor</label>
-        <input type="text" value="" id="txtproveedor"><br>
-
-        <button id="btnguardar">Guardar</button><br>
-        <button id="btnconsultar">Consultar</button><br>
-        <div id="listado"></div>
-
-        </section>
-
-        
-        
+        </section>  
    </section>
-    
+
 </body>
 </html>

@@ -1,39 +1,37 @@
 *{
     margin: 0px;
     padding:0px;
-    
-    
-
+    border-color: black solid 1px;
 }
+
+.contenedor
+{
+    display: grid;
+    grid-template: 50px 50px 50px 1fr 50px;
+    grid-template-columns: 1fr;
+    border: 0px;
+    text-decoration: none;
+    grid-template-areas:"cabecera"
+                        "menu"
+                        "crudProductos"
+                        "listado"
+                        "pie";
+    
+}
+
 .general
 {
     background-color: white;
     padding: 10px;
     font-family: serif;
-    
-}
-.contenedor
-{
-    display: grid;
-    grid-template: 50px 50px 1fr 100px;
-    grid-template-columns: 100%;
- 
-    
-    text-decoration: none;
-
-    grid-template-areas:"cabecera "
-                        "menu "
-                        "video"
-                        "submenu"
-                        "pie";
 }
 
+/*CABECERA*/
 .cabecera{
     grid-area: cabecera;
     font-family: serif;
     text-decoration: none;
-    width:100%;
-    
+    width:100%; 
 }
 
 .cabecera form{
@@ -92,9 +90,9 @@
 
 .cabecera td{
     border-spacing: 0px;
-   
 }
 
+/*MENÚ*/
 #menu{
     grid-area: menu;
     font-family: serif;
@@ -114,7 +112,6 @@ ul, ol{
 }
 
 .lista > li{
-    
     text-align: left; /*Ubicamos el texto del submenú a la izquierda */
     width: 100%;
 }
@@ -132,6 +129,7 @@ ul, ol{
     background-color: rgb(40, 40, 136) ;
     
 }
+
 .lista li ul{ /*Ocultamos el submenú */
     display:none;
     position:absolute;
@@ -145,72 +143,5 @@ ul, ol{
     position: relative;
 }
 
-.video 
-{
-    grid-area: video;   
-}
-
-/* SUBNMENU*/
-.submenu{
-    grid-area: submenu;
-
-}
-
-.contenedorSubmenu{
-    display: grid;
-    grid-template: 50% 50%;
-    grid-template-columns: 17% 17% 17% 17% 17% 1fr;
-    text-decoration: none;
-
-    grid-template-areas:"submenu1 submenu2 submenu3 submenu4 submenu5 submenu6"
-                        "cuadroOfertas cuadroOfertas cuadroOfertas cuadroOfertas cuadroOfertas cuadroOfertas";
-}
-
-.iconos{
-    font-family: serif;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    border: 1px solid;
-    border-color: skyblue;
-    text-align:center;
-    padding: 10px;
-}
-
-.iconos:hover{
-    background-color: skyblue;
-}
-
-.cuadroOfertas{
-    grid-area: cuadroOfertas;
-    width: 100%;
-}
-
-
-.submenu label{
-    font-family: serif;
-    font-size: 29px;
-    color: rgb(11, 11, 49);
-    font-weight: bold;
-}
-
-.pie{
-    grid-area: pie;
-    background-color: rgba(18, 18, 75, 0.973);
-    text-decoration: none;
-    color:white;
-    font-family:  serif;
-    position: relative;
-    font-family: serif;
-}
-
-.pie a{
-    font-family: serif;
-    text-decoration: none;
-    color:white;
-    font-family:  serif;
-    
-}
-
-
-
+/*CRUD PRODUCTOS*/
 
