@@ -1,7 +1,7 @@
 *{
     margin: 0px;
     padding:0px;
-    border-color: black solid 1px;
+
 }
 
 .contenedor
@@ -14,8 +14,7 @@
     grid-template-areas:"cabecera"
                         "menu"
                         "crudProductos"
-                        "listado"
-                        "pie";
+                        "listado";
     
 }
 
@@ -144,4 +143,63 @@ ul, ol{
 }
 
 /*CRUD PRODUCTOS*/
+.crudProductos{
+    grid-area: crudProductos;
+    font-family: serif;
+    text-decoration: none;
+    width:100%; 
+}
+
+.crudProductos table{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding:10px;
+    width: 30%;
+    border-spacing: 6px;
+    font-family: serif;
+    font-size: 20px;
+    background-color:white;
+    color: black;
+}
+
+.crudProductos input{
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    color: black;
+    font-family: serif;
+}
+
+.crudProductos input:hover{
+    border-color: rgb(40, 40, 136) ;
+}
+.crudProductos button{
+    width: 60%;
+    background: rgb(32, 32, 107) ;
+    padding: 5px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px ;
+    font-family: serif;
+    transition: all .5s ease;
+}
+
+.crudProductos button:hover{
+    background: rgb(40, 40, 136) ;
+}
+
+/*LISTADO DE CONSULTA*/
+#listado table{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding:10px;
+    width: 70%;
+    border-spacing: 6px;
+    font-family: serif;
+    font-size: 18px;
+    background-color:white;
+    color: black;
+    border: solid 1px black;
+    text-align: center;
+}
 

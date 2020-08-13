@@ -13,6 +13,7 @@ firebase.analytics();
 var database = firebase.database();
 
         window.addEventListener('load',function(){
+
                 let idProducto= document.querySelector('#txtidProducto');
                 let descripcion= document.querySelector('#txtdescripcion');
                 let existencia= document.querySelector('#txtexistencia');
@@ -21,6 +22,14 @@ var database = firebase.database();
                 
                 let listado= document.querySelector('#listado');
 
+                /*NUEVO*/
+                btnnuevo.addEventListener('click',function(){
+                    idProducto="".value,
+                    descripcion="".value,
+                    existencia="".value,
+                    precio="".value,
+                    proveedor="".value
+                })
                 /*GUARDAR */
                 document.querySelector('#btnguardar').addEventListener('click',function(){
                     firebase.database().ref('productos/'+ idProducto.value ).set({
@@ -37,8 +46,16 @@ var database = firebase.database();
                 {
                     firebase.database().ref('/productos').on('value',function(resultado) 
                     {
-                        html='<table border=1>'
-                            
+                        html='<table>'
+                        html+="<thead>"
+                            html+="<tr>"
+                            html+="<th>Id</th>"
+                            html+="<th>Descripción</th>"
+                            html+="<th>Existencia</th>"
+                            html+="<th>Precio</th>"
+                            html+="<th>Proveedor</th>"
+                            html+="</tr>"
+                            html+="</thead>"
                         resultado.forEach(function(resul) {
                             html+= `<tr><td>${resul.val().idProducto} </td>
                             <td> ${resul.val().descripcion}</td> 
