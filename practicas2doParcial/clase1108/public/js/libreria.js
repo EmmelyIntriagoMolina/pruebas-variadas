@@ -17,27 +17,25 @@ window.addEventListener('load',function(){
         }).then(resultado2=>{
             //console.log(Object.entries(resultado2))
 
-            let tablaHtml="<table border=1>";
+            let tablaHtml="<table border=1>"
             for(let elemento in resultado2)
             {
                 tablaHtml+="<tr>"
-                tablaHtml+=`<td> <button class='boton'>${resultado2[elemento].codigo}</button></td> <td> ${resultado2[elemento].descripcion }</td>`
+                tablaHtml+=`<td> <button class='boton'> ${resultado2[elemento].codigo}</button></td> <td> ${resultado2[elemento].descripcion }</td>`
             
                 tablaHtml+="</tr>"
             }
-            tablaHtml="</table>"
+            tablaHtml+="</table>"
             divconsulta.innerHTML=tablaHtml
             
-            document.querySelectorAll('boton').forEach(elemento=>{
+            document.querySelectorAll('.boton').forEach(elemento=>{
                 elemento.addEventListener('click',function(){
-                   let url2=`https://practicas-10042.firebaseio.com/cursos/${elemento.innerHTML.trim}.json`
+                   let url2=`https://practicas-10042.firebaseio.com/cursos/${elemento.innerHTML.trim()}.json`
                     console.log(url2)
 
-                    fetch(url2).the(respuesta=>{
-                        return respuesta.json()
-                    }).then(respuesta2=>{
+                    fetch(url2).then(respuesta=>{return respuesta.json()}).then(respuesta2=>{
                         txtcodigo.value=respuesta2.codigo;
-                        txtdescripcion.value=respuesta2.descripcion
+                        txtdescripcion.value=respuesta2.descripcion;
                     })
                 })
             })
@@ -46,7 +44,7 @@ window.addEventListener('load',function(){
 
             console.log(error)
         })
-    })
+    }) 
 
     //GUARDAR
     
@@ -95,7 +93,7 @@ window.addEventListener('load',function(){
     //ELIMINAR
     btneliminar.addEventListener('click',function(){
         //metodo POST
-        let url=`https://practicas-10042.firebaseio.com/cursos/.json`
+        let url=`https://practicas-10042.firebaseio.com/cursos/${txtcodigo.value}.json`
         
         fetch(url,{
             method:'DELETE'
