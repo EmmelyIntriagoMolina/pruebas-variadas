@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Curso } from 'src/app/interfaces/curso';
 
 @Component({
   selector: 'app-curso',
@@ -6,21 +7,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./curso.page.scss'],
 })
 export class CursoPage implements OnInit {
+  
+  public cursoAuxiliar:Curso={codigo:'000',descripcion:'Vacio',cupo:0};
 
-  public mensaje:string="Hola IONIC";
-  //Variables para calcular suma de dos numeros
-  public valor1:number=0;
-  public valor2:number=0;
-  public total:number=0;
+  public cursosAuxiliar: Curso[]=
+  [
+    {codigo:'001',descripcion:'PrimeroA',cupo:25},
+    {codigo:'002',descripcion:'SegundoA',cupo:20},
+    {codigo:'003',descripcion:'TerceroA',cupo:30},
+  
+  ];
+  //:{codigo:string, descripcion:string, cupo:number}
+  //={codigo:'000', descripcion:'vacio', cupo:0};
+
+  
+  //codigo 001
+  //descripcion primeroA
+  //cupo 25
+
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  sumar()
-  {
-    this.total= this.valor1+this.valor2;
+  nuevo(){
+    this.cursoAuxiliar.codigo="";
+    this.cursoAuxiliar={descripcion:'', cupo:0,codigo:''};
   }
-
 }

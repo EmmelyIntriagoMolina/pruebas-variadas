@@ -5,14 +5,35 @@
 </ion-header>
 
 <ion-content>
+  <ion-button shape="round">Grabar</ion-button>
 
-  <ion-input [(ngModel)]="mensaje"></ion-input>
-  <ion-input type="number" [(ngModel)]="valor1" (ionChange)="sumar()"></ion-input>
-  <ion-input type="number" [(ngModel)]="valor2" (ionChange)="sumar()"></ion-input>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">Codigo</ion-label>
+          <ion-input [(ngModel)]="cursoAuxiliar.codigo"></ion-input>
+        </ion-item>
+      </ion-col>
+      
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">Cupo</ion-label>
+          <ion-input type="number" [(ngModel)]="cursoAuxiliar.cupo"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
 
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">Descripcion</ion-label>
+          <ion-input [(ngModel)]="cursoAuxiliar.descripcion"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row> 
+  </ion-grid>
 
-  <!--Mostrar al Cliente-->
-
-  <h1>{{mensaje}}</h1>
-  <h2> {{total}} </h2>
+  <ion-button shape="round" (click)="nuevo()">Nuevo</ion-button>
+  
 </ion-content>
