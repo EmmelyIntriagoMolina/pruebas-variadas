@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>curso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-input [(ngModel)]="mensaje"></ion-input>
+  <ion-input type="number" [(ngModel)]="valor1" (ionChange)="sumar()"></ion-input>
+  <ion-input type="number" [(ngModel)]="valor2" (ionChange)="sumar()"></ion-input>
+
+
+  <!--Mostrar al Cliente-->
+
+  <h1>{{mensaje}}</h1>
+  <h2> {{total}} </h2>
+</ion-content>
