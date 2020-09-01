@@ -5,8 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-button shape="round">Grabar</ion-button>
-
+  
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -35,5 +34,28 @@
   </ion-grid>
 
   <ion-button shape="round" (click)="nuevo()">Nuevo</ion-button>
+  <ion-button shape="round" (click)="grabar()">Grabar</ion-button>
+  <ion-button shape="round" (click)="consultar()">Consultar</ion-button>
+  <ion-button shape="round" (click)="eliminar()">Eliminar</ion-button>
   
+  <ion-grid>
+    <ion-row *ngFor="let item of cusrsosAuxiliar">
+      <ion-col size="2">
+        <ion-item>
+          <ion-label position="fixed">{{item.codigo}}</ion-label>     
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item>
+          <ion-label position="fixed">{{item.descripcion}}</ion-label>  
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item size="2">
+          <ion-label position="fixed">{{item.cupo}}</ion-label>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
 </ion-content>
