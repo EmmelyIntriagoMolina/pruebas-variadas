@@ -41,7 +41,7 @@
   <ion-grid>
     <ion-row *ngFor="let item of cusrsosAuxiliar">
       <ion-col size="2">
-        <ion-item>
+        <ion-item color="primary" (click)="consultaIndividual(item.codigo)">
           <ion-label position="fixed">{{item.codigo}}</ion-label>     
         </ion-item>
       </ion-col>
