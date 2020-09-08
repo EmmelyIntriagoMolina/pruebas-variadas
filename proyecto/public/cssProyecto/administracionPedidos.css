@@ -13,7 +13,7 @@
     text-decoration: none;
     grid-template-areas:"cabecera"
                         "menu"
-                        "crudProductos"
+                        "crudPedidos"
                         "listado";
     
 }
@@ -142,15 +142,15 @@ ul, ol{
     position: relative;
 }
 
-/*CRUD PRODUCTOS*/
-.crudProductos{
-    grid-area: crudProductos;
+/*CRUD PEDIDOS*/
+.crudPedidos{
+    grid-area: crudPedidos;
     font-family: serif;
     text-decoration: none;
     width:100%; 
 }
 
-.crudProductos table{
+.crudPedidos table{
     margin-top: 10px;
     margin-left: 10px;
     padding:10px;
@@ -162,7 +162,7 @@ ul, ol{
     color: black;
 }
 
-.crudProductos input{
+.crudPedidos input{
     width: 100%;
     padding: 5px;
     font-size: 16px;
@@ -170,12 +170,20 @@ ul, ol{
     font-family: serif;
 }
 
-.crudProductos input:hover{
+.crudPedidos select{
+    width: 106%;
+    padding: 5px;
+    font-size: 16px;
+    color: black;
+    font-family: serif;
+}
+
+.crudPedidos input:hover{
     border-color: rgb(40, 40, 136) ;
 }
-.crudProductos button{
-    width: 60%;
-    background: rgb(11, 11, 49);
+.botones{
+    width: 75%;
+    background: rgb(11, 11, 49) ;
     padding: 5px;
     color: white;
     margin: 16px 0;
@@ -184,7 +192,7 @@ ul, ol{
     transition: all .5s ease;
 }
 
-.crudProductos button:hover{
+.botones:hover{
     background: rgb(40, 40, 136) ;
 }
 
@@ -201,6 +209,10 @@ ul, ol{
     color: black;
     border: solid 1px black;
     text-align: center;
+}
+
+.crudPedidos table td label{
+    font-size: 20px;
 }
 
 #btnelim, #btnedit{

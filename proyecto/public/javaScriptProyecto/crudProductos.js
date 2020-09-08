@@ -24,11 +24,11 @@ var database = firebase.database();
 
                 /*NUEVO*/
                 btnnuevo.addEventListener('click',function(){
-                    idProducto="".value,
-                    descripcion="".value,
-                    existencia="".value,
-                    precio="".value,
-                    proveedor="".value
+                    idProducto.value="",
+                    descripcion.value="",
+                    existencia.value="",
+                    precio.value="",
+                    proveedor.value=""
                 })
                 /*GUARDAR */
                 document.querySelector('#btnguardar').addEventListener('click',function(){
@@ -62,8 +62,8 @@ var database = firebase.database();
                             <td> ${resul.val().existencia}</td> 
                             <td> ${resul.val().precio}</td> 
                             <td> ${resul.val().proveedor}</td> 
-                            <td> <button class='accion' value=${resul.val().idProducto} >Editar</button> </td>
-                            <td> <button class='accion' value=${resul.val().idProducto} >Eliminar</button></td> 
+                            <td> <button class='accion' value=${resul.val().idProducto} id='btnedit'>Editar</button> </td>
+                            <td> <button class='accion' value=${resul.val().idProducto} id='btnelim'>Eliminar</button></td> 
                             </tr>` 
                         });      
                         html+='</table>'

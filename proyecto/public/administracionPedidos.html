@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venta de Insumos</title>
-    <link rel="stylesheet" href="./cssProyecto/paginaPrincipal.css">
     
-    <script src="./javaScriptProyecto/paginaPrincipal.js"></script>    
-
+    <title>Administración Pedidos</title>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="./javaScriptProyecto/crudPedidos.js"></script>
+    <link rel="stylesheet" href="./cssProyecto/administracionPedidos.css">
 </head>
 <body>
-
     <section class="contenedor">
         <!--CABECERA-->
         <header class="general cabecera">
@@ -67,67 +69,48 @@
             </ul>
         </nav>
 
-        <!--VIDEO-->
-        <section class="general video"> 
-            <video src="./videos/emergenciaCovid.mp4" autoplay controls loop width="100%" ></video>
-        </section>
-
-        <!--SUBMENU-->
-        <section class="general submenu"></section>
-            <label>Categorías populares</label>
-            <section class="contenedorSubmenu">
-                <section class="iconos">
-                    <a href="mascarillas.html"><img src="./imagenes/iconoMascarilla.svg" alt="No se puede cargar la imágen" width="200px" height="100px"></a>
-                    <p>MASCARILLAS</p>
-                </section>
-
-                <section class="iconos">
-                    <a href="BATAS.HTML"><img src="./imagenes/iconoBata.png" alt="No se puede cargar la imágen" width="150px" height="100px"></a>
-                    <p>BATAS</p>
-                </section>
-
-                <section class="iconos">
-                    <a href="guantes.html"><img src="./imagenes/iconoGuantes.png" alt="No se puede cargar la imágen" width="150px" height="100px"></a>
-                    <p>GUANTES</p>
-                </section>
-                <section class="iconos">
-                    <a href="gorro.html"><img src="./imagenes/iconoGorro.png" alt="No se puede cargar la imágen" width="150px" height="100px"></a>
-                    <p>GORROS</p>
-                </section>
-
-                <section class="iconos">
-                    <a href="alcoholPrincipal.html"><img src="./imagenes/iconoAlcohol.png" alt="No se puede cargar la imágen" width="150px" height="100px"></a>
-                    <p>ALCOHOLES</p>
-                </section>
-
-                <section class="iconos">
-                    <a href="mascaras.html"><img src="./imagenes/iconoMascara.png" alt="No se puede cargar la imágen" width="150px" height="100px"></a>
-                    <p>MÁSCARA DE PROTECCIÓN</p>
-                </section>
-                
-                <section class="cuadroOfertas">
-                    <a href="combos.html"><img src="./imagenes/coronavirus.png" alt="No se puede cargar la imágen" width="100%" ></a>
-                </section>
-            </section>
-        </section>
-
-       
-        <!--PIE DE PAGINA-->
-        <footer class="general pie">
-            
+        <section class="crudPedidos">
             <table>
                 <tr>
-                    <td><label><a href="desarrollador.html">Acerca del Desarrollador</a></label></td>
+                    <td><label for="txtidPedido">Id</label></td>
+                    <td colspan="2"><input type="text" value="" id="txtidPedido" placeholder="000"></td>
                 </tr>
                 <tr>
-                    <td><label><a href="pagina.html">Acerca de la Página</a></label></td>
+                    <td><label for="txtdescripcion">Descripción</label></td>
+                    <td colspan="2"><input type="text" value="" id="txtdescripcion" placeholder="Pedido 0"></td>
                 </tr>
                 <tr>
-                    <td><label>Emmely Intriago, Manta-Ecuador © Copyright 2020</label></td>
+                    <td><label for="txtfecha">Fecha</label></td>
+                    <td colspan="2"><input type="text" value="" id="txtfecha" placeholder="Día/Mes/Año"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtcliente">Cliente</label></td>
+                    <td colspan="2"><input type="text" value="" id="txtcliente" placeholder="Nombre"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtdir">Dirección</label></td>
+                    <td colspan="2"><input type="text" value="" id="txtdir" placeholder="Dirección"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtestado">Estado</label></td>
+                    <td colspan="2"><select class="correoDir"name="correo" id="txtestado">
+                        <option value="aprobado">Aprobado</option>
+                        <option value="rechazado">Rechazado</option>
+                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><button id="btnnuevo" class="botones">Nuevo</button></td>
+                    <td><button id="btnguardar" class="botones">Guardar</button></td>
+                    <td><button id="btnconsultar"class="botones">Consultar</button></td>
                 </tr>
             </table>
-            
-        </footer>
-    </section>
+        </section>
+
+        <!--MOSTRAR RESULTADOS DE CONSULTAS-->
+        <div id="listado"></div>
+
+        
+   </section>
 </body>
 </html>
