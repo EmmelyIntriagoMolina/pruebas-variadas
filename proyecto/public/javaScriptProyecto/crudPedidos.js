@@ -18,7 +18,7 @@ window.addEventListener('load',function(){
     let descripcion= document.querySelector('#txtdescripcion');
     let fecha= document.querySelector('#txtfecha');
     let cliente= document.querySelector('#txtcliente');
-    let direccion= document.querySelector('#txtdireccion');
+    let direccion= document.querySelector('#txtdir');
     let estado= document.querySelector('#txtestado');
 
     let listado= document.querySelector('#listado');

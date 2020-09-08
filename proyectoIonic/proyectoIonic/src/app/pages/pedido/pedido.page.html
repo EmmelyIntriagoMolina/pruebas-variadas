@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pedido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!--FILA I-->
+    <ion-row>
+      <!--Columna I-->
+      <ion-col>
+        <ion-item >
+          <ion-label position="fixed" color="primary">Código:</ion-label>
+          <ion-input [(ngModel)]="pedidoAuxiliar.idPedido"></ion-input>
+        </ion-item>
+      </ion-col>
+      <!--Columna II-->
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed" color="primary">Fecha:</ion-label>
+          <ion-input  [(ngModel)]="pedidoAuxiliar.fecha"></ion-input>
+        </ion-item>
+      </ion-col>
+     </ion-row>
+    
+    <!--FILA II-->
+    <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="fixed" color="primary">Descripción:</ion-label>
+            <ion-input  [(ngModel)]="pedidoAuxiliar.descripcion"></ion-input>
+          </ion-item>
+        </ion-col>
+    </ion-row>
+
+    <!--Fila II-->
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed" color="primary">Cliente:</ion-label>
+          <ion-input [(ngModel)]="pedidoAuxiliar.cliente"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row> 
+
+    <!--Fila III-->
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed" color="primary">Dirección:</ion-label>
+          <ion-input [(ngModel)]="pedidoAuxiliar.direccion"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row> 
+  </ion-grid>
+
+  <ion-button shape="round" (click)="nuevo()">Nuevo</ion-button>
+  <ion-button shape="round" (click)="grabar()">Grabar</ion-button>
+  <ion-button shape="round" (click)="consultar()">Consultar</ion-button>
+  <ion-button shape="round" (click)="eliminar()">Eliminar</ion-button>
+  <!--
+  <ion-grid>
+    <ion-row *ngFor="let item of cusrsosAuxiliar">
+      <ion-col size="2">
+        <ion-item color="primary" (click)="consultaIndividual(item.codigo)">
+          <ion-label position="fixed">{{item.codigo}}</ion-label>     
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item>
+          <ion-label position="fixed">{{item.descripcion}}</ion-label>  
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item size="2">
+          <ion-label position="fixed">{{item.cupo}}</ion-label>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid> -->
+
+</ion-content>
