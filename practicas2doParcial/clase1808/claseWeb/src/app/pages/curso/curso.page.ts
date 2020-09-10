@@ -70,6 +70,8 @@ export class CursoPage implements OnInit, iCrud {
       console.log(err)
     })
   }
+
+  
   eliminar(): void {
     this.cliente.deleteCurso(this.cursoAuxiliar.codigo).then(respuesta=>{
       console.log('eliminó correctamente')
