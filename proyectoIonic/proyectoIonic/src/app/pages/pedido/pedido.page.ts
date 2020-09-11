@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Pedido } from 'src/app/interfaces/pedido';
+import { Pedido, agProducto } from 'src/app/interfaces/pedido';
 import { iCrud } from 'src/app/interfaces/iCrud';
 import { PedidoService } from 'src/app/services/pedido.service';
+import { ToastController } from '@ionic/angular';
+import { Producto } from 'src/app/interfaces/producto';
 
 @Component({
   selector: 'app-pedido',
@@ -10,43 +12,50 @@ import { PedidoService } from 'src/app/services/pedido.service';
 })
 export class PedidoPage implements OnInit, iCrud {
 
-  public pedidoAuxiliar: Pedido={idPedido:'000', descripcion:'Pedido 0', fecha:'08/09/2020', cliente:'Emmely', direccion:'Altagracia'}
-  
+  //Pedido
+  public pedidoAuxiliar: Pedido={idPedido:'000', descripcion:'Pedido 0', fecha:'08/09/2020', cliente:'Emmely', direccion:'Altagracia', productos:[]}
   public pedidosAuxiliar: Pedido[]=[];
-  /*{idPedido:'000', descripcion:'Pedido 0', fecha:'08/09/2020', cliente:'Emmely', direccion:'Altagracia'},
-  {idPedido:'001', descripcion:'Pedido 1', fecha:'08/09/2020', cliente:'Emmely', direccion:'Altagracia'},
-  {idPedido:'002', descripcion:'Pedido 2', fecha:'08/09/2020', cliente:'Emmely', direccion:'Altagracia'},
-  {idPedido:'003', descripcion:'Pedido 3', fecha:'08/09/2020', cliente:'Emmely', direccion:'Altagracia'},
-  {idPedido:'004', descripcion:'Pedido 4', fecha:'08/09/2020', cliente:'Emmely', direccion:'Altagracia'}
- */
 
-
-  constructor(private clientehttp: PedidoService) { }
+  //Producto
+  public productoAuxiliar: Producto={idProducto:'0', descripcion:'', existencia:'', precio:'', proveedor:''}
+  public productosAuxiliar: Producto[]=[];
+  //Agregar Producto
+  public productoAuxiliar2: agProducto={idProducto:'', descripcion:'', cantidad:''}
   
+ 
+  constructor(private clientehttp: PedidoService, private toast:ToastController) { }
+  
+
+  async mostrarMensaje(mensaje:string, duracion:number){
+    const mensajex=await this.toast.create({message:mensaje, duration:duracion});
+    mensajex.present();
+  }
 
   //Guardar un Pedido
   grabar(): void {
     this.clientehttp.postPedido(this.pedidoAuxiliar).then(respuesta=>{
-      console.log('grabó correctamente')
+      console.log('El pedido se envió correctamente',2000)
     }).catch(err=>{
-      console.log('no se pudo almacenar el curso')
+      console.log('No se pudo enviar el pedido')
     })
   }
 
-  //Consultar un Pedido
+  //Consultar un productos para el pedido
   consultar(): void {
     this.clientehttp.getPedidos().then(respuesta=>{
-      this.pedidosAuxiliar=[];
-      for(let elemento in respuesta)
-      {
-        this.pedidosAuxiliar.push(respuesta[elemento]);
-      }
-      console.log(respuesta)
-    }).catch(error=>{
-      console.log(error)
-    })
+      this.productosAuxiliar=[];
+        for(let elemento in respuesta)
+        {
+          this.productosAuxiliar.push(respuesta[elemento]);
+        }
+        console.log(respuesta)
+      }).catch(err=>{
+        console.log(err)
+      })
   }
+  
 
+  //Eliminar un Pedido
   eliminar(): void {
     this.clientehttp.deletePedido(this.pedidoAuxiliar.idPedido).then(respuesta=>{
       console.log('Eliminó correctamente')
@@ -64,6 +73,12 @@ export class PedidoPage implements OnInit, iCrud {
     this.pedidoAuxiliar.fecha='';
     this.pedidoAuxiliar.cliente='';
     this.pedidoAuxiliar.direccion='';
+    this.pedidoAuxiliar.productos=[];
+    
+  }
+
+  agregarProducto(){
+    this.pedidoAuxiliar.productos.push(this.productoAuxiliar2);
   }
 
 }

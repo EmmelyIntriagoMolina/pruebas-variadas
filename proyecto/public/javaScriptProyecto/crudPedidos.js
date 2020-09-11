@@ -23,15 +23,7 @@ window.addEventListener('load',function(){
 
     let listado= document.querySelector('#listado');
 
-    /*NUEVO*/
-    btnnuevo.addEventListener('click',function(){
-        idPedido.value="",
-        descripcion.value="",
-        fecha.value="",
-        cliente.value="",
-        direccion.value="",
-        estado.value=""
-    })
+    
 
     /*GUARDAR */
     document.querySelector('#btnguardar').addEventListener('click',function(){
@@ -102,6 +94,7 @@ window.addEventListener('load',function(){
                 descripcion.value=objetoRespuesta.descripcion;
                 fecha.value=objetoRespuesta.fecha;
                 cliente.value=objetoRespuesta.cliente;
+                direccion.value=objetoRespuesta.direccion;
                 estado.value=objetoRespuesta.estado;
             })
         }

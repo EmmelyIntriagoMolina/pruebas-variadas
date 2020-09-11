@@ -22,7 +22,6 @@ window.addEventListener('load',function(){
             {
                 tablaHtml+="<tr>"
                 tablaHtml+=`<td> <button class='boton'> ${resultado2[elemento].codigo}</button></td> <td> ${resultado2[elemento].descripcion }</td>`
-            
                 tablaHtml+="</tr>"
             }
             tablaHtml+="</table>"

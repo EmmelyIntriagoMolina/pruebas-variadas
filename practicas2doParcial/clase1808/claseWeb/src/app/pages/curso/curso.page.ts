@@ -49,7 +49,7 @@ export class CursoPage implements OnInit, iCrud {
   consultar(): void {
     
     this.cliente.getCursos().then(respuesta=>{
-  this.cursosAuxiliar=[];
+    this.cursosAuxiliar=[];
       for(let elemento in respuesta)
       {
         this.cursosAuxiliar.push(respuesta[elemento]);

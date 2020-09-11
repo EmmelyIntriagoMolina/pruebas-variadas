@@ -34,7 +34,7 @@
         </ion-col>
     </ion-row>
 
-    <!--Fila II-->
+    <!--Fila III-->
     <ion-row>
       <ion-col>
         <ion-item>
@@ -44,7 +44,7 @@
       </ion-col>
     </ion-row> 
 
-    <!--Fila III-->
+    <!--Fila IV-->
     <ion-row>
       <ion-col>
         <ion-item>
@@ -53,18 +53,56 @@
         </ion-item>
       </ion-col>
     </ion-row> 
+
+    <!--Fila V-->
+    <!--Agregar Producto-->
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed" color="primary">Id:</ion-label>
+          <ion-input [(ngModel)]="productoAuxiliar2.idProducto"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed" color="primary">Descripción:</ion-label>
+          <ion-input [(ngModel)]="productoAuxiliar2.descripcion"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed" color="primary">Cantidad:</ion-label>
+          <ion-input [(ngModel)]="productoAuxiliar2.cantidad"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 
+  <ion-grid>
+    <ion-label>Productos del Pedido</ion-label><br>
+    <ion-row *ngFor="let item of pedidoAuxiliar.productos">
+      <ion-col>{{item.idProducto}}</ion-col>
+      <ion-col>{{item.descripcion}}</ion-col>
+      <ion-col>{{item.cantidad}}</ion-col>
+    </ion-row>
+  </ion-grid>
+     
+  
+
   <ion-button shape="round" (click)="nuevo()">Nuevo</ion-button>
-  <ion-button shape="round" (click)="grabar()">Grabar</ion-button>
-  <ion-button shape="round" (click)="consultar()">Consultar</ion-button>
+  <ion-button shape="round" (click)="grabar()">Enviar</ion-button>
+  <ion-button shape="round" (click)="consultar()">Lista Productos</ion-button>
   <ion-button shape="round" (click)="eliminar()">Eliminar</ion-button>
+  <ion-button shape="round" (click)="agregarProducto()">Agregar Producto</ion-button>
+
   
   <ion-grid>
-    <ion-row *ngFor="let item of pedidosAuxiliar">
-      <ion-col size="2">
-        <ion-item color="primary" (click)="consultaIndividual(item.idPedido)">
-          <ion-label position="fixed">{{item.idPedido}}</ion-label>     
+    <ion-label>Listado de Productos</ion-label><br>
+    
+    <ion-row *ngFor="let item of productosAuxiliar">
+      <ion-col size="1">
+        <ion-item color="primary">
+          <ion-label position="fixed">{{item.idProducto}}</ion-label>     
         </ion-item>
       </ion-col>
       <ion-col size="4">
@@ -73,21 +111,20 @@
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item size="2">
-          <ion-label position="fixed">{{item.fecha}}</ion-label>
+        <ion-item size="1">
+          <ion-label position="fixed">{{item.existencia}}</ion-label>
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item size="2">
-          <ion-label position="fixed">{{item.cliente}}</ion-label>
+        <ion-item size="1">
+          <ion-label position="fixed">{{item.precio}}</ion-label>
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item size="2">
-          <ion-label position="fixed">{{item.direccion}}</ion-label>
+        <ion-item size="1">
+          <ion-label position="fixed">{{item.proveedor}}</ion-label>
         </ion-item>
       </ion-col>
     </ion-row>
-  </ion-grid> -->
-
+  </ion-grid> 
 </ion-content>

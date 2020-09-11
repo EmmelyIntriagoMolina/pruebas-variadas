@@ -8,17 +8,28 @@ import { Pedido } from '../interfaces/pedido';
 export class PedidoService {
 
   apiURL=`https://insumedventas-f8340.firebaseio.com/pedidos`
+  apiURL2=`https://insumedventas-f8340.firebaseio.com/productos`
 
   constructor(private clienteServicio:HttpClient) { }
 
 
   //Consultar los pedidos
+
+  public getPedidos()
+  {
+    
+      return this.clienteServicio.get(`${this.apiURL2}.json`).toPromise()
+   
+  }
+  /*
   public getPedidos(idPedido='')
   {
     if(idPedido=='')
       return this.clienteServicio.get(`${this.apiURL}.json`).toPromise()
     return this.clienteServicio.get(`${this.apiURL}/${idPedido}.json`).toPromise()
   }
+
+  */
 
   //Crear o modificar un pedido
   public postPedido(pedidox: Pedido)
