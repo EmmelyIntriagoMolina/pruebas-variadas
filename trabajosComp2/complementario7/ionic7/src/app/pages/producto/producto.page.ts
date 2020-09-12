@@ -11,7 +11,7 @@ import { ICrud } from 'src/app/interfaces/ICrud';
 })
 export class ProductoPage implements OnInit, ICrud {
 
-  public productoAuxiliar:producto ={codigo:'000',descripcion:'Vacio'};
+  public productoAuxiliar:producto ={codigo:'000',descripcion:'Vacio',};
 
   public productosAuxiliar: producto[]=[];
 
@@ -27,7 +27,7 @@ export class ProductoPage implements OnInit, ICrud {
 
   nuevo(): void {
     this.productoAuxiliar.codigo="";
-    this.productoAuxiliar={descripcion:'', codigo:''};
+    this.productoAuxiliar={descripcion:'', /*precio:"",*/codigo:''};
   }
   grabar(): void {
     this.cliente.postProducto(this.productoAuxiliar).then(respuesta=>{

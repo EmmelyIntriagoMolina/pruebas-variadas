@@ -182,11 +182,11 @@ ul, ol{
     border-color: rgb(40, 40, 136) ;
 }
 .botones{
-    width: 75%;
+    width: 100%;
     background: rgb(11, 11, 49) ;
     padding: 5px;
     color: white;
-    margin: 16px 0;
+    margin-left: 10px;
     font-size: 16px ;
     font-family: serif;
     transition: all .5s ease;

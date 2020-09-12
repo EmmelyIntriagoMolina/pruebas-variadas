@@ -14,18 +14,18 @@ var database = firebase.database();
 
 window.addEventListener('load',function(){
 
-    let idPedido= document.querySelector('#txtidPedido');
+    /*let idPedido= document.querySelector('#txtidPedido');
     let descripcion= document.querySelector('#txtdescripcion');
     let fecha= document.querySelector('#txtfecha');
     let cliente= document.querySelector('#txtcliente');
     let direccion= document.querySelector('#txtdir');
-    let estado= document.querySelector('#txtestado');
+    let estado= document.querySelector('#txtestado');*/
 
     let listado= document.querySelector('#listado');
 
     
 
-    /*GUARDAR */
+    /*GUARDAR 
     document.querySelector('#btnguardar').addEventListener('click',function(){
         firebase.database().ref('pedidos/'+ idPedido.value ).set({
         idPedido: idPedido.value,
@@ -35,7 +35,7 @@ window.addEventListener('load',function(){
         direccion: direccion.value,
         estado: estado.value
         })
-    });
+    });*/
 
     /*CONSULTAR*/
     document.querySelector('#btnconsultar').addEventListener('click',function()
@@ -50,18 +50,18 @@ window.addEventListener('load',function(){
                 html+="<th>Fecha</th>"
                 html+="<th>Cliente</th>"
                 html+="<th>Dirección</th>"
-                html+="<th>Estado</th>"
+                
                 html+="</tr>"
                 html+="</thead>"
-            resultado.forEach(function(resul) {
+                resultado.forEach(function(resul) {
                 html+= `<tr><td>${resul.val().idPedido} </td>
                 <td> ${resul.val().descripcion}</td> 
                 <td> ${resul.val().fecha}</td> 
                 <td> ${resul.val().cliente}</td> 
                 <td> ${resul.val().direccion}</td> 
-                <td> ${resul.val().estado}</td> 
-                <td> <button class='accion' value=${resul.val().idPedido} id='btnedit'>Editar</button> </td>
-                <td> <button class='accion' value=${resul.val().idPedido} id='btnelim'>Eliminar</button></td> 
+                
+                <td> <button class='accion' value=${resul.val().idPedido} id='btnedit'>Aceptar</button> </td>
+                <td> <button class='accion' value=${resul.val().idPedido} id='btnelim'>Rechazar</button></td> 
                 </tr>` 
             });      
             html+='</table>'
@@ -76,6 +76,8 @@ window.addEventListener('load',function(){
 
         });
     });
+
+    btnedit.addEventListener('click',function(){alert("Pedido Aceptado")})
 
     /*ELIMINAR*/
     function accion(tipo, valor)

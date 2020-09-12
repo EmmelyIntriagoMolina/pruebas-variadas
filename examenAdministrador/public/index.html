@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Requisitos</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/iniciarsesion.js"></script>
+</head>
+<body>
+        <!--FORMULARIO DE SESIÓN-->
+
+        <section class="registro">
+            <h1>Aplicación de Control de Requisitos-Secretaría</h1>
+            <form name="login" action="acercade.html" method="get">
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <h4>Iniciar Sesión</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtnombre">Usuario</label>
+                        </td>
+                        <td colspan="2">
+                            <input class="formulario" type="text" name="usuario"id="txtnombre" placeholder="Ingrese su nombre"  required>
+                            <div id="mensajeNombre"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="contraseña">Contraseña</label>
+                            
+                        </td>
+                        <td colspan="2">
+                            <input class="formulario" type="password" name="contraseña" id="contraseña" placeholder="Ingrese una contraseña" required pattern="[a-zA-Z0-9]{6,15}" title="La contraseña debe incluir números y una 
+                            longitud de 8 caracteres">
+                            <div id="mensajeContraseña"></div>
+                            <div id="mensajeContraseña2"></div>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td colspan="3">
+                            <input class="boton" type="submit" name="resgistrarse" id="btregistrarse" 
+                            value="Iniciar Sesión" onclick="Login()">
+                        </td>
+                    </tr>
+                </table>
+                
+             </form>
+    </section>
+</body>
+</html>
