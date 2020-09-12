@@ -12,15 +12,16 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
-    {
-      title: 'Productos',
-      url: '/producto',
-      icon: 'cart'
-    },
+    
     {
       title: 'Inbox',
       url: '/folder/Inbox',
       icon: 'mail'
+    },
+    {
+      title: 'Productos',
+      url: '/producto',
+      icon: 'heart'
     },
     {
       title: 'Outbox',
