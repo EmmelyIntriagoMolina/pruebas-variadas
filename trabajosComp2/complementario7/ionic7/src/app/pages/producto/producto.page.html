@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-item>
+      <ion-label position="fixed">Código:</ion-label>
+      <ion-input [(ngModel)]="productoAuxiliar.codigo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="fixed">Descripción:</ion-label>
+      <ion-input [(ngModel)]="productoAuxiliar.descripcion"></ion-input>
+    </ion-item>
+<!--
+
+
+    <ion-item>
+      <ion-label position="fixed">Precio:</ion-label>
+      <ion-input [(ngModel)]="productoAuxiliar.precio"></ion-input>
+    </ion-item>-->
+  </ion-grid>
+
+  <ion-button color="danger" (click)="nuevo()">Nuevo</ion-button>
+  <ion-button color="danger" (click)="grabar()">Grabar</ion-button>
+  <ion-button color="danger" (click)="consultar()">Consultar</ion-button>
+  <ion-button color="danger" (click)="eliminar()">Eliminar</ion-button>
+
+  <ion-grid>
+    <ion-row class="info2" *ngFor="let item of productosAuxiliar">
+      <ion-col size="2">
+        <ion-item color="primary" (click)="consultaIndividual(item.codigo)">
+          <ion-label position="fixed">{{item.codigo}}</ion-label>     
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item color="secondary">
+          <ion-label position="fixed">{{item.descripcion}}</ion-label>  
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <!--<ion-row>
+      <ion-col size="3">
+        <ion-item color="secondary">
+          <ion-label position="fixed">{{item.precio}}</ion-label> 
+        </ion-item>
+      </ion-col>
+    </ion-row>-->
+  </ion-grid>
+</ion-content>

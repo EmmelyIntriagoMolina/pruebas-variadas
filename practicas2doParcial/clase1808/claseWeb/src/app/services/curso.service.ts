@@ -5,6 +5,7 @@ import { Curso } from '../interfaces/curso';
   providedIn: 'root'
 })
 export class CursoService {
+  
 
   apiURL=`https://practicas-10042.firebaseio.com/cursos`
 
@@ -26,7 +27,7 @@ export class CursoService {
   //https://practicas-10042.firebaseio.com/cursos/003.json
     return this.clienteServicio.put(`${this.apiURL}/${cursox.codigo}.json`
     ,cursox,{headers:{'Content-Type':'application/json'}}).toPromise();
-  
+
   }
   
   //ELIMINAR EL CURSO SEGÚN SU CÓDIGO
