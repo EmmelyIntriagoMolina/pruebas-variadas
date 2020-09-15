@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Solicitud</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+    <ion-item>
+      <ion-label position="fixed" color="primary">Código:</ion-label>
+      <ion-input [(ngModel)]="solicitudAuxiliar.codigo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="fixed" color="primary">Identificación:</ion-label>
+      <ion-input [(ngModel)]="solicitudAuxiliar.identificacion"></ion-input>
+    </ion-item>
+  </ion-row>
+
+  <!--Agregar Registro-->
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="fixed" color="primary">Id:</ion-label>
+        <ion-input type:number [(ngModel)]="requisitoAuxiliar.idR"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="fixed" color="primary">Tipo:</ion-label>
+        <ion-input [(ngModel)]="requisitoAuxiliar.tipo"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="fixed" color="primary">Fecha:</ion-label>
+        <ion-input [(ngModel)]="requisitoAuxiliar.fecha"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="fixed" color="primary">Persona:</ion-label>
+        <ion-input [(ngModel)]="requisitoAuxiliar.personaInv"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label>Estado</ion-label>
+        <ion-select  [(ngModel)]= "requisitoAuxiliar.estado" >
+          <ion-select-option value="Recibido">Recibido</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-label>Requisitos de la Solicitud</ion-label><br>
+    <ion-row *ngFor="let item of solicitudAuxiliar.requisito">
+      <ion-col>{{item.idR}}</ion-col>
+      <ion-col>{{item.tipo}}</ion-col>
+      <ion-col>{{item.fecha}}</ion-col>
+      <ion-col>{{item.personaInv}}</ion-col>
+      <ion-col>{{item.estado}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button color="primary" (click)="nuevo()">Nuevo</ion-button>
+  <ion-button color="primary" (click)="grabar()">Enviar</ion-button>
+  <ion-button color="primary" (click)="consultar()">Consultar</ion-button>
+  <ion-button color="primary" (click)="eliminar()">Eliminar</ion-button>
+  <ion-button color="primary" (click)="agregarRequisito()">Agregar Requisito</ion-button>
+  <ion-button color="primary" (click)="cantidadR()">Total Requerimientos</ion-button>
+
+  <ion-grid>
+    <ion-row class="info2" *ngFor="let item of solicitudesAuxiliar">
+      <ion-col size="1">
+        <ion-item color="primary" >
+          <ion-label position="fixed">{{item.codigo}}</ion-label>     
+        </ion-item>
+      </ion-col>
+      <ion-col size="4">
+        <ion-item>
+          <ion-label position="fixed">{{item.identificacion}}</ion-label>     
+        </ion-item>
+      </ion-col>
+      <ion-col size="4" *ngFor="let item of requisitosAuxiliar">
+        <ion-item >
+          <ion-label position="fixed">{{item.estado}}</ion-label>     
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

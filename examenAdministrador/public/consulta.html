@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
     <title>Consulta</title>
+    <link rel="stylesheet" href="./css/crudrequisitos.css">
+    <script src="./js/crudrequisitos.js"></script>
 </head>
 <body>
     <section class="contenedor">
@@ -18,6 +24,77 @@
                 <li><a href="acercade.html">Acerca De</a></li> 
             </ul>
         </nav>
+
+        <!--Consulta-->
+        <section class="consulta">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <label> <strong>Ingrese Código de Solicitud a Consultar</strong> </label>
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td><label for="txtcodigo">Código</label></td>
+                    <td colspan="2"><input type="text" value="" id="txtcodigo" placeholder="Codigo"></td>
+                </tr>
+                
+                <tr>
+                    <td><button id="btnconsultar">Consultar</button></td>
+                    
+                </tr>
+            </table>
+        </section>
+
+        <!--Área donde se mostrarán los registros-->
+        <section>
+            <div id="listado"></div>
+        </section>
+        <section class="consulta">
+            <table>
+                <tr>
+                    <td><label for="txtid">Código Requisito:</label></td>
+                    <td colspan="2"><input type="text" value="" id="txtid" placeholder="Código"></td>
+                
+                </tr>
+                <tr>
+                    <td><label for="txttipo">Tipo</label></td>
+                    <td colspan="2"><input type="text" value="" id="txttipo" placeholder="Tipo"></td>
+                
+                </tr>
+                <tr>
+                    <td><label for="txtfecha">Fecha</label></td>
+                    <td colspan="2"><input type="text" value="" id="txtfecha" placeholder="Fecha"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtpersonaInv">Persona Involucrada</label></td>
+                    <td colspan="2"><input type="text" value="" id="txtpersonaInv" placeholder="Persona Involucrada"></td>
+                </tr>
+                <tr>
+                    <td><label for="txttiempo">Tiempo Elaboración</label></td>
+                    <td colspan="2"><input type="text" value="" id="txttiempo" placeholder="0 Min"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtresponsable">Responsable</label></td>
+                    <td colspan="2"><input type="text" value="" id="txtresponsable" placeholder="Responsable"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtestado">Estado</label></td>
+                    <td colspan="2">
+                        <select id="txtestado">
+                            <option value="Recibido">Recibido</option>
+                            <option value="En Proceso">En Proceso</option>
+                            <option value="Concluido">Concluido</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button id="btnguardar">Guardar</button></td>
+                    <td><button id="btnconcluido">Total Concluidos</button></td>
+                </tr>
+                
+            </table>
+        </section>
     </section>
 
 </body>
